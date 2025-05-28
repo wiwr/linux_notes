@@ -48,6 +48,12 @@ get_previous_month_and_year() {
 	echo "$previous_year $previous_month"
 }
 ```
+
+```bash
+read prev_month prev_year < <(get_previous_month_and_year)
+echo "Previous month: $prev_month"
+echo "Year: $prev_year"
+```
 ### Comments
 * using `10#$var_name` to avoid octal interpretation
 * `"%02d"`for `printf` is used to get two digit number with leading zeros when needed. Examples:
