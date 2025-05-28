@@ -6,12 +6,15 @@ Calculate previous month and correct year for that month.
 current_month=$(date +%m)
 current_year=$(date +%Y)
 
+# Remove leading zero
+current_month=$((10#$current_month))
+
 # Calculate previous month
 if [ "$current_month" -eq 1 ]; then
 	previous_month=12
 	previous_year=$((current_year -1))
 else
-	previous_month=$(printf "%02d" $((10#$current_mont -1)))
+	previous_month=$(printf "%02d" $((current_month -1)))
 	previous_year=$current_year
 fi
 
