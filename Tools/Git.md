@@ -1,6 +1,14 @@
+## Installation
+```bash
+sudo apt install git
+```
 ## Check git configuration
 ```bash
 git config --global --list
+```
+or
+```bash
+vim ~/.gitconfig
 ```
 ## Configuring Git
 ```bash
@@ -12,6 +20,10 @@ When used without parameter can be use to check current value
 
 ```bash
 git config --global init.defaultBranch main
+```
+### Alias
+```bash
+git config --gloabl alias.co commit
 ```
 Configuration to make that match to GitHub
 ## Git version
@@ -29,6 +41,15 @@ on GitHub go to settings and SSH and GPG keys
 ssh -T git@github.com
 eval `ssh-agent -s`
 ssh-add ~/.ssh/id_keyForGitHub
+```
+```bash
+ssh-keygen
+eval "$(ssh-agent -s)"
+ssh-add -k /home/pi/.ssh/pi_key
+```
+
+```bash
+git config --global "ssh -i ~/.ssh/id_rsa_ansible_git"
 ```
 Config file for SSH to point git
 ```bash
@@ -67,7 +88,12 @@ git commit -am 'Added new thing'
 git log
 git log --all
 ```
-
+```bash
+git log --all --graph --decorate
+```
+```bash
+git log --oneline
+```
 ## Git remote
 ```bash
 git remote add origin <git_repo>
@@ -90,6 +116,13 @@ to remove branch
 git branch -d feature/new_function
 ```
 
+```bash
+git branch dog; git checkout dog
+```
+or
+```bash
+git checkout -b dog
+```
 ## Git Checkout
 ```bash
 git checkout -b feature/new_function
@@ -167,6 +200,7 @@ Copy a repository into your own account
 git merge feature/new_function
 git merge origin/mian
 git merge --abort
+git merge --continue
 ```
 
 ### git merge remote to local
@@ -175,12 +209,16 @@ git fetch
 git merge origin/main
 ```
 
+## Mergetool
+```bash
+git mergetool
+```
 ## Git cat-file
 ```bash
 git cat-file -p <commit_hash full| comit_hash 7 char>
 ```
 
-
+### Create a new repository
 ```bash
 echo "# linux_notes" >> README.md
 git init
@@ -190,13 +228,17 @@ git branch -M main
 git remote add origin git@github.com:wiwr/linux_notes.git
 git push -u origin main
 ```
-
+### Push an existing repository
 ```bash
 git remote add origin git@github.com:wiwr/linux_notes.git
 git branch -M main
 git push -u origin main
 ```
-
+## Stash
+```bash
+git stash
+git stash pop
+```
 # Debug
 ### Asking for password
 Check remote URL
