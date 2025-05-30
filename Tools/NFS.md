@@ -91,6 +91,10 @@ sudo apt install nfs-common autofs -y
 ```bash
 showmount --exports 192.168.122.171
 ```
+or 
+```bash
+showmount -e some.server.com
+```
 ```Shell
 sudo vim /etc/auto.master
 ```
@@ -153,3 +157,21 @@ retry=#    – number of minutes to keep retrying a failed mount
 bg         – after initial failure, all retries happen in the background
 fg         – after initial failure, all retries happen in the foreground, blocking others
 ```
+# Checks
+```bash
+mount -t nfs4
+```
+
+# `exportfs` Command
+
+Used to maintain the NFS exports table.
+
+### Example:
+```bash
+exportfs -a -r -v
+```
+### Options:
+
+- `-a` – export all directories listed in `/etc/exports`
+- `-r` – re-synchronize the export list
+- `-v` – verbose output (shows detailed information)
