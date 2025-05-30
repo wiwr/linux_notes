@@ -10,6 +10,7 @@ sudo mv /etc/exports /etc/exports.org
 ```
 ```bash
 sudo vim /etc/exports
+```
 
 Provide information follow 
 ```properties
@@ -120,4 +121,22 @@ ls /mnt/nfs
 # Additional information
 ```ini
 Port 2049
+```
+
+# Firewall
+### TCP and UDP 
+```
+Port 2049 (nfs) 
+Port 111 (rpcbind) 
+Port 20048 (showmount) 
+```
+### /etc/sysconfig/nfs 
+```
+RQUOTAD_PORT=49001 
+LOCKD_TCPPORT=49002 
+LOCKD_UDPPORT=49003 
+MOUNTD_PORT=49004 
+STATD_PORT=49005 
+STATD_OUTGOING_PORT=49006 
+RDMA_PORT=49007
 ```
