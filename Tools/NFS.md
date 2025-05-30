@@ -140,3 +140,16 @@ STATD_PORT=49005 
 STATD_OUTGOING_PORT=49006 
 RDMA_PORT=49007
 ```
+# Mount options
+```text
+noauto     – does not mount automatically; requires a manual `mount` command
+hard       – default; waits indefinitely to recover the connection
+soft       – terminates the process if the connection is lost
+rsize      – read block size; can be increased from the default 1024 to 8192
+wsize      – write block size; can be increased from the default 1024 to 8192
+timeo=#    – time (in tenths of a second) before another transmission attempt
+retrans=#  – number of times the NFS client retries a request (after timeout)
+retry=#    – number of minutes to keep retrying a failed mount
+bg         – after initial failure, all retries happen in the background
+fg         – after initial failure, all retries happen in the foreground, blocking others
+```
