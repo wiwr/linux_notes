@@ -148,7 +148,7 @@ $ sudo vgextend data_vg /dev/vdh
 ```bash
 $ sudo lvextend –L +500M /dev/data_vg/data_lv -r
 ```
-
+## RAID1 Mirror
 ```bash
 $ sudo lvs
 ```
@@ -201,6 +201,7 @@ $ sudo lvcreate –l 100%FREE data_vg –n moveme /dev/vdb
 $ lsblk
 ```
 
+## Move
 ```bash
 $ sudo lvconvert –m1 data_vg/moveme /dev/vdd
 ```
@@ -233,6 +234,7 @@ $ sudo lvconvert –m1 –type mirror –mirrorlog disk data_vg/moveme
 $ lsblk
 ```
 
+## RAID0 Mirror
 ```bash
 $ sudo lvs
 ```
@@ -260,7 +262,7 @@ $ sudo lvremove data_vg/lv_raid0
 ```bash
 $ sudo lvcreate --type raid0 –l 100%FREE –n lv_raid0 –i 2 data_vg /dev/vdb /dev/vdd
 ```
-
+# RAID5
 ```bash
 $ sudo lvs
 ```
@@ -317,6 +319,7 @@ $ sudo lvconvert –repair data_vg/lv_raid5
 $ sudo vgreduce --removemissing data_vg
 ```
 
+## Snapshot
 ```bash
 $ sudo lvs
 ```
@@ -364,7 +367,7 @@ $ sudo lvdisplay
 ```bash
 $ sudo dd if=/dev/urandom of=testFile1 bs=1M count=100
 ```
-
+## Snapshot restore
 ```bash
 $ sudo lvs
 ```
