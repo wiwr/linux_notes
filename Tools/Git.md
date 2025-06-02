@@ -37,7 +37,7 @@ alias gita="git add"
 alias gitc="git commit"
 alias gitp="git push"
 alias gitu="git pull"
-alias gitl="git log"
+alias gitl="git log --all --graph"
 alias gitb="git branch"
 alias giti="git init"
 alias gitcl="git clone"
@@ -63,6 +63,25 @@ config
 
 [init]
 	defaultBranch = main
+
+[status]
+	branch = true
+	showStash = true
+	showUntrackedFiles = all
+
+[push]
+	autoSetupRemote = true
+	default = current
+	followTags = true
+
+[pull]
+	default = current
+	rebase = true
+
+[rebase]
+	autoStash = true
+	missingCommitsCheck = warn
+
 ```
 
 ### Alias
