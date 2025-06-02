@@ -21,6 +21,50 @@ When used without parameter can be use to check current value
 ```bash
 git config --global init.defaultBranch main
 ```
+## Configuration file
+~
+|-.config
+|	|- git
+|		|- config
+|		|- ignore
+|		|-template
+|-.bashrc
+
+.bashrc
+```
+alias gits="git status --short"
+alias gita="git add"
+alias gitc="git commit"
+alias gitp="git push"
+alias gitu="git pull"
+alias gitl="git log"
+alias gitb="git branch"
+alias giti="git init"
+alias gitcl="git clone"
+```
+config
+```
+[user]
+	name = <name>
+	email = email@email.com
+
+[core]
+	compression = 9
+	whitespace = error
+	preloadindex = true
+
+[advice]
+	addEmptyPathspec = false
+	pushNonFastForward = false
+	statusHints = false
+
+[url "git@github.com:user/"]
+	insteadOf = "us:"
+
+[init]
+	defaultBranch = main
+```
+
 ### Alias
 ```bash
 git config --gloabl alias.co commit
