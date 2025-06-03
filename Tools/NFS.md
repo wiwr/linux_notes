@@ -1,6 +1,6 @@
 # Server
 ```bash
-sudo apt install nfs-kernel-server
+sudo apt install nfs-kernel-server -y
 ```
 ```bash
 sudo mkdir -p /exports/backup
