@@ -1,5 +1,11 @@
 ```bash
+sudo apt install ufw
+```
+```bash
 sudo ufw disable 
+```
+```bash
+sudo ufw enable
 ```
 ```bash
 sudo ufw status 
@@ -15,6 +21,9 @@ sudo ufw status numbered
 ```
 ```bash
 sudo ufw allow in on enp0s3 from 8.8.8.8 
+```
+```bash
+sudo ufw allow ssh
 ```
 ```bash
 sudo ufw default deny incoming 
