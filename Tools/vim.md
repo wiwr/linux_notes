@@ -15,3 +15,6 @@ Sequens of actions
 q – to stop a macro 
 @h – to run a macro 
 9@h- to run a macro 9 times 
+# commands
+:!command - to execute any shell command
+
