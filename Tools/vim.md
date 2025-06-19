@@ -57,3 +57,23 @@ Use xxd as a filter within an editor such as vim(1) to hexdump a region marked b
        the line and type: 
 
        !!xxd -r
+
+## g command
+```
+:g/patter/cmd
+```
+```
+:g/original/p
+:g/original
+```
+```
+:g/original/d
+```
+```
+:g/original/norm A coś tam
+```
+
+# v command
+is inversion
+# p command
+print
