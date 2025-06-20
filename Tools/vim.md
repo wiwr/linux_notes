@@ -73,7 +73,32 @@ Use xxd as a filter within an editor such as vim(1) to hexdump a region marked b
 :g/original/norm A coś tam
 ```
 
+
 # v command
 is inversion
 # p command
 print
+
+## gn
+```
+/Music
+gn
+c
+cgn
+.
+
+gN
+cgN
+e! - to revert changes
+```
+
+## i & Crtl+0
+
+## i & Ctrl+N
+Ctrl+N Ctrl+P Ctrl+Y
+
+## i & indent
+To add Ctrl+T
+To remove Ctrl+D
+
+## i & Ctrl+R
