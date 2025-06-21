@@ -102,3 +102,26 @@ To add Ctrl+T
 To remove Ctrl+D
 
 ## i & Ctrl+R
+
+## :!
+```
+:!wc -w file_name
+```
+or 
+```<CTRL-R>%``` - paste current file name to command line
+```
+.!cowsay "
+```
+and ```
+<CTRL-R><CTRL-L>``` - paste current line to command line
+```
+"
+```
+
+## Tab completion
+
+## Repeat command
+```
+@:
+```
+
