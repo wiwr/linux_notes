@@ -125,3 +125,17 @@ and ```
 @:
 ```
 
+## Normal command
+to add word on end of each line
+```
+:1,10 norm A word
+```
+```<CTRL-V>``` select range
+
+```
+norm A test
+```
+
+```
+:%norm 0wi*^[ea*
+```
