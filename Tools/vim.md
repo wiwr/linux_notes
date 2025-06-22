@@ -139,3 +139,12 @@ norm A test
 ```
 :%norm 0wi*^[ea*
 ```
+
+## Normal mode
+```gi``` - insert text where insert mode was stopped
+```vap``` - select whole paragraph
+```gv``` - start visual mode with last area and mode
+```.``` - repeat last command
+
+```zb``` - scroll current line to bottom of the screen
+```zz``` - scroll current line to middle of the screen
