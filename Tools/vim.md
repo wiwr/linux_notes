@@ -116,7 +116,7 @@ and ```
 <CTRL-R><CTRL-L>``` - paste current line to command line
 ```
 "
-```
+ ```
 
 ## Tab completion
 
@@ -148,3 +148,23 @@ norm A test
 
 ```zb``` - scroll current line to bottom of the screen
 ```zz``` - scroll current line to middle of the screen
+
+## move characters
+```l``` - move cursor [count] characters to right
+```h``` - move cursor [count] characters to left
+```w``` - move cursor [count] words forward
+```b``` - move cursor [count] words backwards
+```e``` - move cursor to the end of [count] words forward
+```ge``` - move cursor to the end of [count] words backward
+```gE``` - move cursor to the end of [count] WORDs backward
+```W``` - move cursor [count] WORDs forward
+```B``` - move cursor [count] WORDs backwards
+```0``` - goes to the very beginning of the line
+```^``` - jump to the first non-whitespace character
+```$``` - jump to the end of the line
+```f{char}``` - find the next instance of the {char}
+`F{char}` - find previous instance of that {char}
+`t{char}` - move in front of that {char}
+`T{char}` - move in front of that {char} (backwards)
+`;` - repeat last `f`, `F`, `t` or `T`
+`,` - repeat in the opposite direction
