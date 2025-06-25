@@ -221,3 +221,22 @@ Type help: statusline for more information.
 
 ## Reload
 Save the .vimrc file with :w and source the .vimrc file like this :source ~/.vimrc to make the changes take effect.
+
+## Fold Long Files
+```
+
+106 " STATUS LINE ------------------------------------------------------------ {{{                                     
+107  
+108 " Status bar code goes here. 
+109  
+110 " }}} 
+```
+`zo` - to open a single fold under the cursor. 
+
+`zc` - to close the fold under the cursor. 
+
+`zR` -  to open all folds. 
+
+`zM` -  to close all folds. 
+
+Type `:help folding` for more information.
