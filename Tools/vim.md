@@ -240,3 +240,30 @@ Save the .vimrc file with :w and source the .vimrc file like this :source ~/.vim
 `zM` -  to close all folds. 
 
 Type `:help folding` for more information.
+
+# Windows
+`:sp` - split current window horizontally
+`CTRL-W S` or `CTRL-W CTRL-S` - split current window horizontally
+
+`:vsp` - slit current window vertically
+`CTRL-W V` or `CTRL-W CTRL-V` - split current window vertically
+
+`CTRL-W h/j/k/l` or `CTRL-W arrow keys` - move focus to window in given direction
+`CTRL-W CTRL-W` - focus next window clock-wise
+`CTRL-W P` - focus previous window
+
+`CTRL-W -` - decrease current window height
+`CTRL-W +` - increase current window height
+
+`CTRL-W <` - decrease current window width
+`CTRL-W >` - increase current window width
+
+`CTRL-W =` - make all windows equally high and wide
+
+`CTRL-W Q` or `CTRL-W CTRL-Q`- close current window
+`CTRL-W O` - close all other windows
+
+`:new` - split window horizontally with new file
+`:vnew` - split window vertically with new file
+`CTRL-W n`- split window horizontally with new file
+
