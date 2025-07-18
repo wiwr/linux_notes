@@ -11,6 +11,9 @@ Menu `Window` and option `Toggle Window Fullscreen`
 `Ctrl+SPACEBAR` - to maximize area (toggle)
 `~` - view select
 `Ctrl-Alt-q` - for quad view (toggle)
-
+`Alt+Z` - to toggle X-Rayg
+`t` - to toggle toolbar
 # Configuration
 Press `n` key then `view` tab `Quad View` and check `Lock Rotation` and `Sync Zoom/Pan`
+Go to `Scene Propertis`, then to `Units` and change `Length`
+Go to `Preferences`, `Themes`, `3D Viewport` and updated `Wire` and `Wire Edit`
