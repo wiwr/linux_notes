@@ -17,6 +17,8 @@ Menu `Window` and option `Toggle Window Fullscreen`
 `Shift-d` - to duplicate
 `x`, `y` or `z` - to constrain to that axis
 `Ctrl-j` - to join selected objects
+## Numpad
+`.` - to zoom
 # Configuration
 Press `n` key then `view` tab `Quad View` and check `Lock Rotation` and `Sync Zoom/Pan`
 Go to `Scene Propertis`, then to `Units` and change `Length`
