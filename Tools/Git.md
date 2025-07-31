@@ -21,6 +21,10 @@ When used without parameter can be use to check current value
 ```bash
 git config --global init.defaultBranch main
 ```
+#### To check configuration
+```bash
+git config --global --list
+```
 ## Configuration file
 ~
 |-.config
