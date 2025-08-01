@@ -2,6 +2,7 @@
 vimtutor
 required vim-enhanced
 # macros
+`q{0-9a-zA-Z"}` - record macro into register {0-9a-z-A-Z"}
 ## With back to beginning of line: 
 ```
 qa0<ESC>q
@@ -267,3 +268,7 @@ Type `:help folding` for more information.
 `:vnew` - split window vertically with new file
 `CTRL-W n`- split window horizontally with new file
 
+# Register
+
+`reg[isters]` - list all numbered and named registers
+`"{register}` - Use {register} for next delete/yank/put

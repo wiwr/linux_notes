@@ -169,8 +169,12 @@ git remote -v
 ```
 
 ## Git Branch
+rename branch
 ```bash
 git branch -M main
+```
+
+```bash
 git branch
 git branch --all
 git branch <name_of_new_branch>
