@@ -6,6 +6,9 @@ Menu `Window` and option `Toggle Window Fullscreen`
 `Press Mid_Mouse` - look around
 `Shift + Press Mid_Mouse` - move left/right/up/downFF
 
+`g y 3000` - move 3000 millimeters on y
+
+
 # Navigation
 `Ctrl+Z` - back action
 `g` - to grab
@@ -43,3 +46,18 @@ Menu `Window` and option `Toggle Window Fullscreen`
 Press `n` key then `view` tab `Quad View` and check `Lock Rotation` and `Sync Zoom/Pan`
 Go to `Scene Propertis`, then to `Units` and change `Length`
 Go to `Preferences`, `Themes`, `3D Viewport` and updated `Wire` and `Wire Edit`
+
+## Configuration for python
+First to to Edit -> Preferences -> Interface
++ enable Python Tooltips
++ enable User Tooltips
+Add additional screen and set as Info
+
+
+## Setting up units
+Scene -> Units 
+	- Unit System -> Metric
+	- Length -> Millimeters
+
+## Keep scale corect
+`Ctrl+A` and apply scale
