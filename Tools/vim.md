@@ -272,3 +272,8 @@ Type `:help folding` for more information.
 
 `reg[isters]` - list all numbered and named registers
 `"{register}` - Use {register} for next delete/yank/put
+
+# Jump list
+`:h jumplist`
+`:jumps` or `:ju`
+`7^O` 
