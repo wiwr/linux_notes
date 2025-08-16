@@ -6,6 +6,8 @@ Replacement for ls.
 `eza -l --sort=size /etc`
 `eza -l --group-directory-first /etc`
 `eza --tree`
+`eza -l --git`
+
 
 
 
