@@ -78,3 +78,7 @@ nmap -sV -sC -v 192.168.1.222
 nmap -sV --script=http-malware-host -p443 192.168.1.222
 ```
 
+## More verbose
+```bash
+nmap -vv 192.168.1.222
+```
