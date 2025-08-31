@@ -1,5 +1,5 @@
 # dig
-[[Network]]
+[[Linux/Network]]
 
 ```bash
 dig learnlinux.tv

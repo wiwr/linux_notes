@@ -1,5 +1,5 @@
 # ip
-[[Network]]
+[[Linux/Network]]
 
 ```bash
 ip addr show
