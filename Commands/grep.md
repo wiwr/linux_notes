@@ -1,6 +1,42 @@
-
-
-
+### basic options
+case insensitive
+```bash
+grep -i word file.txt
+```
+line number
+```bash
+grep -n word file.txt
+```
+find word not part
+```bash
+grep -w word file.txt
+```
+count findings
+```bash
+grep -c word file.txt
+```
+output only the results
+```bash
+grep -o word file.txt
+```
+invert match
+```bash
+grep -v word file.txt
+```
+recursive mode
+```bash
+grep -r word file.txt
+```
+to get context (2 before and/or after)
+```bash
+grep -C 2 word file.txt
+```
+```bash
+grep -A 2 word file.txt
+```
+```bash
+grep -B 2 word file.txt
+```
 ### Regular expression
 
 `grep -E` - Enhanced regular expression
