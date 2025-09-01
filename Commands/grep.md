@@ -1,3 +1,14 @@
+# basic
+```bash
+cat /etc/ssh/sshd_config | grep Port
+```
+```bash
+grep Port /etc/ssh/sshd_config
+```
+
+```bash
+cat /etc/ssh/sshd_config | grep -v Port
+```
 ### basic options
 case insensitive
 ```bash
