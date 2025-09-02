@@ -3,6 +3,21 @@
 sudo apt install nmap
 ```
 # Scans
+Single destination
+```bash
+nmap 192.168.1.222
+```
+Information about system
+```bash
+namp -O 192.168.1.222
+```
+Do only ping for network
+```bash
+nmap -sP 192.168.1.222
+```
+```bash
+nmap -sP 192.168.1.0/24 | grep "Nmap scan" | awk '{ print $5 }'
+```
 ## specific ports
 for single
 ```bash
