@@ -272,8 +272,12 @@ Type `:help folding` for more information.
 
 `reg[isters]` - list all numbered and named registers
 `"{register}` - Use {register} for next delete/yank/put
-
+## find file:q
+`:find <file name>`
+or in subdirectory
+`:find **/<part of name>`
 # Jump list
 `:h jumplist`
 `:jumps` or `:ju`
 `7^O` 
+
