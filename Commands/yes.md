@@ -17,3 +17,8 @@ yes | sudo apt install vim
 ```bash
 yes | sudo apt install --auto-remove vim
 ```
+
+to send 10 yes to output
+```bash
+yes | head -n 5
+```
