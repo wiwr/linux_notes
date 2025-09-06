@@ -26,6 +26,9 @@ count findings
 ```bash
 grep -c word file.txt
 ```
+```bash
+sudo grep -c root * 2>/dev/null
+```
 output only the results
 ```bash
 grep -o word file.txt
