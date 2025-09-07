@@ -281,3 +281,23 @@ or in subdirectory
 `:jumps` or `:ju`
 `7^O` 
 
+# Diff mode
+```bash
+vimdiff file1 file2 [file3 file4 ...]
+```
+```bash
+vim -d file1 file2 [file3 file4 ...]
+```
+`]c` - jump to next diff
+`[c` - jump to previous diff
+`do` - get/obtain diff from other buffer
+`dp` - put diff to other buffer
+`:vsplit <file_name>`
+`:diffthis` - make current window part of diff
+`:diffput [buffer]` - put diff to other [buffer]
+`:diffget [buffer]` - get diff from other [buffer]
+`:diffoff` - remove current window from diff
+`:windo {cmd}`  execute command in each focusable window
+```bash
+:windo diffoff
+```
