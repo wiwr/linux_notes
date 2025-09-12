@@ -6,6 +6,8 @@ ssh [opcje] [nazwa_użytkownika@]host [polecenie]
 ssh server.admin.com "df -h /var/log"
 ```
 
+### Update configuration
+``
 ### Pass user
 ```bash
 ssh -l hsolo@server.admin.com
