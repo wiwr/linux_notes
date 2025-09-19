@@ -61,3 +61,9 @@ awk '{print "First column item: " $1 " Second column item: " $2 }' temps.csv
 awk '($0 ~ /e$/){print $0}' animals.txtW!tek1984
 
 ```
+```bash
+awk -F, '$3 > 50 {print $1, $2}' data.csv
+```
+```bash
+awk 'BEGIN { RS=""; FS="\n"; ORS="\n\n" } {print $2,$3 }' data.log
+```
