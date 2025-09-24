@@ -298,7 +298,7 @@ vim -d file1 file2 [file3 file4 ...]
 `:diffget [buffer]` - get diff from other [buffer]
 `:diffoff` - remove current window from diff
 `:windo {cmd}`  execute command in each focusable window
-
+`CTRL-w w` - switch between windows
 ```bash
 :windo diffoff
 ```
