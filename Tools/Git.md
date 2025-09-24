@@ -15,6 +15,7 @@ vim ~/.gitconfig
 git config --global user.name "Your Name"
 git config --global user.email "your.email@example.com"
 git config --global core.editor "your text editor"
+git config merge.tool vimdiff
 ```
 When used without parameter can be use to check current value
 
