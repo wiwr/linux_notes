@@ -1,0 +1,6 @@
+[[popd]]
+
+```bash
+pushd /etc
+```
+
