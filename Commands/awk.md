@@ -83,3 +83,27 @@ Count lines that contain more then n characters
 ```bash
 awk 'length($0) > n' input_file.txt
 ```
+```bash
+awk 'BEGIN{printf "Name\tAmount\tPrice\n"}{print}' input_file.txt
+```
+variable
+```bash
+awk -v var=Test 'BEGIN{printf "Name = %s\n",name}'
+```
+global variables
+```bash
+awk --dump-variables ''
+cat awkvars.out
+```
+```bash
+awk 'BEGIN { num = 11; if (num % 2 == 0) printf "%d is even number.\n", num; else printf "%d is odd number.\n", num}'
+```
+```bash
+awk 'BEGIN { for (i = 1; i <= 5; ++i) print i }'
+```
+```bash
+awk 'BEGIN {i = 1; while (i < 6) { print i; ++i} }'
+```
+```bash
+awk 'BEGIN {i = 1; do { print i; ++i } while (i < 6) }'
+```
