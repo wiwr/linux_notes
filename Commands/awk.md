@@ -67,3 +67,19 @@ awk -F, '$3 > 50 {print $1, $2}' data.csv
 ```bash
 awk 'BEGIN { RS=""; FS="\n"; ORS="\n\n" } {print $2,$3 }' data.log
 ```
+
+```bash
+awk '{print $3 "\t" $4}' input_file.txt
+```
+To print line match pattern
+```bash
+awk '/a/' input_file.txt
+```
+Print number of line that match pattern
+```bash
+awk '/a/{++cnt} END {print "Count = ", cnt}' input_file.txt
+```
+Count lines that contain more then n characters
+```bash
+awk 'length($0) > n' input_file.txt
+```
