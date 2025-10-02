@@ -302,3 +302,7 @@ vim -d file1 file2 [file3 file4 ...]
 ```bash
 :windo diffoff
 ```
+### To read man page
+```bash
+export MANPAGER="vim +MANPAGER --not-a-term -"
+```
