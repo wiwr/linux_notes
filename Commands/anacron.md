@@ -19,3 +19,13 @@ cd /etc
 ```bash
 ls -l cron*
 ```
+## location where anacron keep information about last run
+```bash
+cd /var/soop/anacron
+```
+```bash
+ls -l
+```
+```bash
+sudo cat cron.daily cron.weekly cron. monthly
+```
