@@ -12,3 +12,10 @@ exit 0
 ```bash
 chmod 755 hello.sh
 ```
+## anacron path
+```bash
+cd /etc
+```
+```bash
+ls -l cron*
+```
