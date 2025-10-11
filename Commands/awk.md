@@ -107,3 +107,28 @@ awk 'BEGIN {i = 1; while (i < 6) { print i; ++i} }'
 ```bash
 awk 'BEGIN {i = 1; do { print i; ++i } while (i < 6) }'
 ```
+```bash
+ps -ef | awk '{print $3, $5, $7}'
+```
+```bash
+ps -ef | awk '{print $3 " --- " $5 " === " $7}'
+```
+```bash
+ps -ef | awk 'BEGIN{printf "Col1\tCol2\tCol3\n"} {print $2"\t"$3"\t"$7} END{print "Done"}'  
+```
+grep with awk
+```bash
+ps -ef | awk ' /tty/ {print}'
+```
+```bash
+ps -ef | awk '/test/{++c} END {print "Total matched: " , c}'
+```
+```bash
+ps -ef | awk 'length($0) > 100 '
+```
+```bash
+ps -ef | awk '{sub(/root/,"xxxxx");print}'
+```
+```bash
+ps -ef | awk '{print $1; print $2}'
+```
