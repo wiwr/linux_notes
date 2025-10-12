@@ -132,3 +132,14 @@ ps -ef | awk '{sub(/root/,"xxxxx");print}'
 ```bash
 ps -ef | awk '{print $1; print $2}'
 ```
+
+### if
+```awk
+x = 543
+if (x == 111)
+	print "It's 111";
+else if (x == 456)
+	print "It's 456";
+else
+	print "something else"
+```
