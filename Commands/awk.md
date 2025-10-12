@@ -155,3 +155,15 @@ print array1["tree"] " " array1[23];
 array1["abc"] = "xyz";
 delete array1["abc"];
 ```
+### for loop
+```awk
+for (c = 0; c <= 10; c++) print c
+```
+### while loop
+```awk
+c = 0; while (c <= 10) {print c; c++}
+```
+### do while loop
+```awk
+c = 0; do {print c; c++ } while (c <= 10)
+```
