@@ -143,3 +143,15 @@ else if (x == 456)
 else
 	print "something else"
 ```
+### array
+```awk
+array1["tree"] = "green";
+array1["rock"] = "brown";
+array1[23] = "red";
+print array1["tree"] " " array1[23];
+```
+### delete from array
+```awk
+array1["abc"] = "xyz";
+delete array1["abc"];
+```
