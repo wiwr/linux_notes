@@ -121,6 +121,12 @@ grep with awk
 ps -ef | awk ' /tty/ {print}'
 ```
 ```bash
+ps -ef | awk '/^google/'
+```
+```bash
+ps -ef | awk '/google$/'
+```
+```bash
 ps -ef | awk '/test/{++c} END {print "Total matched: " , c}'
 ```
 ```bash
@@ -166,4 +172,8 @@ c = 0; while (c <= 10) {print c; c++}
 ### do while loop
 ```awk
 c = 0; do {print c; c++ } while (c <= 10)
+```
+### functions
+```awk
+function test(n){return n*2} BEGIN { print test(5)}
 ```
