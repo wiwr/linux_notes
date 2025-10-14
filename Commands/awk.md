@@ -177,3 +177,7 @@ c = 0; do {print c; c++ } while (c <= 10)
 ```awk
 function test(n){return n*2} BEGIN { print test(5)}
 ```
+### system functions
+```bash
+awk 'BEGIN { system("uname -a"); print c}'
+```
