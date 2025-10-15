@@ -6,5 +6,5 @@ du -sh
 du -sh *
 ```
 ```bash
-
+du -sh logs/*
 ```
