@@ -40,6 +40,7 @@ user1 ALL=(ALL:ALL) ALL
 user2 ALL=(ALL:ALL) /usr/bin/apt
 user3 ALL=(ALL:ALL) /usr/bin/apt,/usr/bin/rm
 user4 ALL=(ALL:ALL) NOPASSWD: /user/bin/apt
+user5 ALL=(ALL:ALL) ALL,!/usr/bin/apt
 ```
 
 
