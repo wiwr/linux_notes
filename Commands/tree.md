@@ -1,6 +1,9 @@
 ## Installation
 not available on mint
-`sudo apt install tree`
+```bash
+sudo apt install tree
+```
+
 ## Usage
 `tree` - basic use
 `tree -s` - with size
@@ -10,3 +13,15 @@ not available on mint
 `tree -p` - with permission
 `tree -f` - full path
 `tree -x` - only local file system
+
+```bash
+tree -A folder
+```
+
+```bash
+tree -L 1
+```
+
+```bash
+tree -if
+```
