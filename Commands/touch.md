@@ -6,3 +6,4 @@
 `touch -t 2025070272232 file_name.txt` - to updated file with specific timestamp
 `touch -c file_name.txt` - do not create file if missing only update timestamp if exist.
 `touch -r ref_file.txt file_name.txt` - to copy timestamp from ref file
+
