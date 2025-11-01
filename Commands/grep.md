@@ -52,7 +52,7 @@ grep -A 2 word file.txt
 grep -B 2 word file.txt
 ```
 ### Regular expression
-
+[[Regular expresion]]
 `grep -E` - Enhanced regular expression
 
 to find lines that starts with given string
