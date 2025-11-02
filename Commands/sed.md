@@ -51,3 +51,9 @@ sed 's|old|new|' test.txt
 ```bash
 sed 's./etc..' test.txt
 ```
+
+```bash
+sed -e 's/:/---/g' /etc/passwd
+```
+
+
