@@ -15,3 +15,6 @@ echo "Teest text" | tr -s e
 echo "Test text" | tr "[:lower:]" "[:upper:]"
 ```
 
+```bash
+tr -d '\r' < test.txt | sort > test_out.txt
+```
