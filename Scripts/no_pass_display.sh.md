@@ -13,6 +13,7 @@ until [ "$pass1" = "$pass2" ]; do
 		echo "Passwords match"
 	else
 		echo "Passwords do not match"
+		echo
 	fi
 done
 ```
