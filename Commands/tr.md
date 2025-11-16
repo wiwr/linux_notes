@@ -18,3 +18,9 @@ echo "Test text" | tr "[:lower:]" "[:upper:]"
 ```bash
 tr -d '\r' < test.txt | sort > test_out.txt
 ```
+
+map complement of set1 to set2
+```bash
+tr -c set1 set2
+```
+
