@@ -19,3 +19,12 @@ wc -m
 ```bash
 wc -c
 ```
+
+```bash
+ps -ef | wc -l
+```
+
+### all files in current folder
+```bash
+wc -l *
+```
