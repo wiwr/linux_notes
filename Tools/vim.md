@@ -306,3 +306,62 @@ vim -d file1 file2 [file3 file4 ...]
 ```bash
 export MANPAGER="vim +MANPAGER --not-a-term -"
 ```
+
+# Opening vim
+```bash
+vim file_name.txt
+```
+
+### Multipe files
+```bash
+vim file_name.txt second_name.txt
+```
+```vim
+:ls
+```
+```vim
+:b 2
+```
+### open side by side
+```bash
+vim file_name.txt second_name.txt -O
+```
+
+### open one under another
+```bash
+vim file_name.txt second_name.txt -o
+```
+### multitab mode
+```bash
+vim file_name.txt second_name.txt -p
+```
+### open file on line
+```bash
+vim file_name.txt +12
+```
+
+### open on specific word
+```bash
+vim file_name.txt -c "/curl"
+```
+
+### diff in vim
+```bash
+vim -d file_name.txt second_name.txt
+```
+
+### read only
+```bash
+vim -R file_name.txt
+```
+
+### stricted mode
+```bash
+vim -M file_name.txt
+
+```
+
+### open with standard input
+```bash
+ls | vim -
+```
