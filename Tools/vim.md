@@ -365,3 +365,12 @@ vim -M file_name.txt
 ```bash
 ls | vim -
 ```
+
+# `g` command
+`G` end of file
+`gg` beginning of the file
+`g0` beginning of the line
+`g$` end of the line
+`GUU` to uppercase
+`Guu` to lowercase
+`G~~` switch capitalization
