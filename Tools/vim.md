@@ -377,3 +377,6 @@ ls | vim -
 `gJ` -
 `ga` - check hex and octal representation of character
 `gn` - go next can be use with c
+`g??` - to encrypt/decrypt string ;)
+`gT` and `gt` - navigate between tabs
+`gx` - external browser, do that on url
