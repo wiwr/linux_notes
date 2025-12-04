@@ -25,3 +25,7 @@ sort test.txt | uniq -d
 ```bash
 sort test.txt | uniq -c
 ```
+
+```bash
+cut -d ' ' -f1 ip.list | sort | uniq -d
+```
