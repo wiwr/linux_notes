@@ -374,3 +374,6 @@ ls | vim -
 `GUU` to uppercase
 `Guu` to lowercase
 `G~~` switch capitalization
+`gJ` -
+`ga` - check hex and octal representation of character
+`gn` - go next can be use with c
