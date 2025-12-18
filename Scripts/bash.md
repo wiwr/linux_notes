@@ -28,5 +28,8 @@ copy directory to two other servers
 tar cf - directory | tee >(ssh server1 tar xf -) >(ssh 192.167.1.200 tar xf -) > /dev/null
 ```
 
+```bash
+vim <(cat file1.txt file2.txt)
+```
 
 
