@@ -380,3 +380,14 @@ ls | vim -
 `g??` - to encrypt/decrypt string ;)
 `gT` and `gt` - navigate between tabs
 `gx` - external browser, do that on url
+## Scrolling
+`ctrl+d` - page down
+`ctrl+b` - page up
+`ctrl+e` - line by line down
+`ctrl+y` - line by line up
+`ctrl+h` - top of the screen without scrolling
+`ctrl+l` - bottom of the screen without scrolling
+`ctr+m` - middle of the screen
+`zz` - make line central
+`zt` - make line on top
+`zb` - make line on bottom
