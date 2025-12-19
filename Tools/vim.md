@@ -392,7 +392,7 @@ ls | vim -
 `zt` - make line on top
 `zb` - make line on bottom
 
-Find and To
+## Find and To
 `f<char>`  - horizontal movement to next char
 `F<char>` - horizontal move back to char
 `t<char>` - to jump front of char
@@ -400,3 +400,12 @@ Find and To
 `;` - repeat move
 `,` - move back
 `vf<char>` - select to char
+
+## External filters
+`:'<,'>!sort` - to sort selected lines
+`:%!sort` - sort all content of file
+`:%!sort -r` - sort all content of file backward
+`:%!sort -r | uniq` - sorted backward with uniq
+`!!` -> `:.!figlet` - done on selected text
+`vip` or `!ip` and then `jq` - to make preatty json
+
