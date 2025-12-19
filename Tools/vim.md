@@ -409,3 +409,7 @@ ls | vim -
 `!!` -> `:.!figlet` - done on selected text
 `vip` or `!ip` and then `jq` - to make preatty json
 
+## global command
+`:g/DEBUG/p` - print all lines
+`:g/DEBUG/d` - to remove all lines with DEBUG
+`:g/^$/d` - to remove all empty lines
