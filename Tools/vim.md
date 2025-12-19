@@ -391,3 +391,12 @@ ls | vim -
 `zz` - make line central
 `zt` - make line on top
 `zb` - make line on bottom
+
+Find and To
+`f<char>`  - horizontal movement to next char
+`F<char>` - horizontal move back to char
+`t<char>` - to jump front of char
+`T<char>` - behind last occurrence of char
+`;` - repeat move
+`,` - move back
+`vf<char>` - select to char
