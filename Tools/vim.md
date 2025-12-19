@@ -413,3 +413,7 @@ ls | vim -
 `:g/DEBUG/p` - print all lines
 `:g/DEBUG/d` - to remove all lines with DEBUG
 `:g/^$/d` - to remove all empty lines
+`:g/^#/d` - remove all comments that start form `#`
+`:v/URGENT/d` - to remove all line that are without URGENT
+`:g/HIGH$/m3` - all that ends with HIGH
+`:g/LOW$/m$` - move to last line when end with LOW
