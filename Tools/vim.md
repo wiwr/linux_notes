@@ -417,3 +417,10 @@ ls | vim -
 `:v/URGENT/d` - to remove all line that are without URGENT
 `:g/HIGH$/m3` - all that ends with HIGH
 `:g/LOW$/m$` - move to last line when end with LOW
+
+`Ctrl+v` + `7j` + `x` + `gv` + `:'<,'>!nl -w1 -s.` - to change bullet point to numbers
+`:r !date` - print date
+`:r !date +\%F\ \%T` - to print formatted date
+`:%!uniq` - to remove duplicates
+`:%!nl -w1 -s.` - number all lines
+
