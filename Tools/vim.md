@@ -437,3 +437,12 @@ up error can be use to use previous command and updated
 `Ctrl+f` - to open window
 `q?` - backward search
 
+## undo, redo and time travel
+`u` - to undo
+`3u` - to undo 3 changes
+`U` - undo all changes to line, but without option to redo
+`:undolist` - information about changes
+`g-` switch branch
+`help undol[ist]` - more information
+`:earlier 15min` - to back 15 min
+
