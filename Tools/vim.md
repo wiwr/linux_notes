@@ -424,3 +424,8 @@ ls | vim -
 `:%!uniq` - to remove duplicates
 `:%!nl -w1 -s.` - number all lines
 
+## increment & decrement
+`Ctrl+a` - increment
+`Ctrl+x` - decrement
+`V` + select all lines + `2Ctrl+a` - added 2 to all selected lines
+`V`+ select all lines + `gCtrl+a` - incrementally update the lines
