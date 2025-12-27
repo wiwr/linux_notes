@@ -429,3 +429,11 @@ ls | vim -
 `Ctrl+x` - decrement
 `V` + select all lines + `2Ctrl+a` - added 2 to all selected lines
 `V`+ select all lines + `gCtrl+a` - incrementally update the lines
+
+## Command line window
+up error can be use to use previous command and updated 
+`q:` - to open list of previous commands
+`q/` - to open window with last searches
+`Ctrl+f` - to open window
+`q?` - backward search
+
