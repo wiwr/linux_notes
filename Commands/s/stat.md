@@ -21,3 +21,11 @@ stat -c $'Access: %x\nModify: %y\nChange: %z" test.txt
 ```bash
 stat -c "%y %n" *.txt | sort -n
 ```
+
+```bash
+stat -c "%y %n" *.txt | grep $(date +%Y-%m-%d)
+```
+
+```bash
+stat -f test.txt
+```
