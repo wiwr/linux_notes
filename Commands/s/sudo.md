@@ -18,7 +18,9 @@ which sudo
 ```bash
 cat /etc/sudoers
 ```
-
+```bash
+cat /etc/sudoers.d/user
+```
 ```bash
 groups user
 ```
