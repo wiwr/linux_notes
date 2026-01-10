@@ -446,3 +446,26 @@ up error can be use to use previous command and updated
 `help undol[ist]` - more information
 `:earlier 15min` - to back 15 min
 
+## multiwindow
+`Ctrl+W` and `v` for vertical split
+`Ctrl+W` and `s` for horizontal split
+`Ctrl+W` and `h`/`j`/`k`/`l` to jump between
+`Ctrl+W` and `p` to jump between last two windows
+`Ctrl+W` and `o` to close all except current one
+`:split <file name>`
+`:vsplit <file name>`
+`Ctrl+W` and `H`/`J`/`K`/`L` to move window
+
+### vimrc
+```bash
+vim ~/.vimrc
+```
+or 
+```bash
+vim ~/.config/vim/vimrc
+```
+```text
+set number
+set rnu
+
+```
