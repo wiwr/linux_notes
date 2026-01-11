@@ -515,3 +515,11 @@ augroup filetypes
   au FileType markdown setlocal spell
 augroup END
 ```
+
+### after directory
+last settings will be taken from that folder
+```bash
+mkdir `~/.config/vim/after/somesetting`
+vim `~/.config/vim/after/somesetting/setting`
+```
+
