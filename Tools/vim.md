@@ -496,3 +496,22 @@ set cursorline
 nnoremap <leader>h :set hlsearch!<CR>
 
 ```
+
+### autocommands
+```bash
+vim ~/.vimrc
+```
+
+```text
+" autocomds
+augroup read
+  au!
+  au BufRead * echo "some file read"
+  au BufRead *.txt echo "a text has been opened"
+augroup END
+
+augroup filetypes
+  au!
+  au FileType markdown setlocal spell
+augroup END
+```
