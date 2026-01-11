@@ -311,6 +311,14 @@ git push -u origin main
 git stash
 git stash pop
 ```
+
+## Git worktrees
+```bash
+git worktree add ../foo foo
+git worktree list
+git worktree remove foo
+
+```
 # Debug
 ### Asking for password
 Check remote URL
