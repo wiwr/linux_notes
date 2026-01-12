@@ -34,12 +34,25 @@ sudo ufw default deny incomming
 sudo ufw enable
 ```
 # SSH
+## create key
+```bash
+ssh-keygen
+```
+## copy key
+```bash
+ssh-copy-id user@192.168.1.111
+```
+## update configuration on server
 ```bash
 sudo vim /etc/ssh/sshd_config
 ```
 ```txt
+PasswordAuthenticaton no
 PermitRootLogin no
-
+```
+## restart ssh
+```bash
+sudo systemctl restart ssh
 ```
 # Services
 ```bash
