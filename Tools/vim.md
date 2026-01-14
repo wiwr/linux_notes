@@ -3,6 +3,18 @@ vimtutor
 required vim-enhanced
 # macros
 `q{0-9a-zA-Z"}` - record macro into register {0-9a-z-A-Z"}
+
+`@@` - repeat last macro
+`10@a` - run macro 10 times
+`:reg` - let to see macros
+
+### update macro
+`"a` - to look on register
+`p` - to put
+edit macro
+visual select 
+`"ay` - to put back to macro
+
 ## With back to beginning of line: 
 ```
 qa0<ESC>q
