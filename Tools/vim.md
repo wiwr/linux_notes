@@ -14,6 +14,10 @@ required vim-enhanced
 edit macro
 visual select 
 `"ay` - to put back to macro
+## register
+`:reg` - to show register
+`"<nameOfRegister>yy` - to copy and put under specific register
+`"<nameOfRegister>p` - to pass from register
 
 ## With back to beginning of line: 
 ```
