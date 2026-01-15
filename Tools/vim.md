@@ -547,3 +547,9 @@ vim `~/.config/vim/after/somesetting/setting`
 `d'a` - to remove all to mark A
 `v'a` - visual select to mark A
 `:makrs` - to get the list of marks
+
+# Jumps
+`:jumps` - to see all jumps
+`Ctrl+O` - jump to last jump
+`10 Ctrl+0` - to do 10 jumps
+
