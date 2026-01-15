@@ -552,4 +552,10 @@ vim `~/.config/vim/after/somesetting/setting`
 `:jumps` - to see all jumps
 `Ctrl+O` - jump to last jump
 `10 Ctrl+0` - to do 10 jumps
+`Ctrl+I` - to go other direction
+
+# Changelist
+`:changes` - list of changes
+`g;` - jump back to previous change
+`g,` - jump one change down
 
