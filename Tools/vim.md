@@ -539,3 +539,11 @@ mkdir `~/.config/vim/after/somesetting`
 vim `~/.config/vim/after/somesetting/setting`
 ```
 
+# Marks
+`m` - to mark
+`ma` - to mark as A
+`'a` - to go to mark A
+`` `a`` - to go to beginning of mark A 
+`d'a` - to remove all to mark A
+`v'a` - visual select to mark A
+`:makrs` - to get the list of marks
