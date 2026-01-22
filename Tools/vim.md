@@ -133,7 +133,7 @@ and ```
 <CTRL-R><CTRL-L>``` - paste current line to command line
 ```
 "
- ```
+```
 
 ## Tab completion
 
@@ -559,3 +559,20 @@ vim `~/.config/vim/after/somesetting/setting`
 `g;` - jump back to previous change
 `g,` - jump one change down
 
+## Text Object
+`vi"` - to select first text object in "
+`va"` - to select around text object for "
+`ci"` - to remove and let put new text inside "
+`ca"` - to remove and put new content around text object
+`di(` - to remove all inside ()
+`yi(` - to copy text inside ()
+`viw` - select word
+`viW` - to get whole word
+`>i{` - to indent inside {}
+`vaB` - select complete block
+`cit` - to updated inside tag
+`dis` - remove sentence
+`das` - remove sentence with space
+`dip` - remove inside paragraph
+`dap` - remove paragraph
+`vi[` - select inside []
