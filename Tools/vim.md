@@ -576,3 +576,9 @@ vim `~/.config/vim/after/somesetting/setting`
 `dip` - remove inside paragraph
 `dap` - remove paragraph
 `vi[` - select inside []
+
+## Quit vim
+`:q` - quite
+`:q!` - quite without saving changes
+`:wq` - write and quite
+`zz` - quit and save if needed
