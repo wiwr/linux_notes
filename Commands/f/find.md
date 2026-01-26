@@ -2,6 +2,12 @@
 find
 ```
 
+search in current directory
+```bash
+find . -name "file_name.txt"
+```
+
+search in specific folder
 ```bash
 find /
 ```
@@ -72,6 +78,13 @@ find . -type f -exec chmod 664 {} \;
 
 ```bash
 find . -type f -name "*.jpg" -maxdepth 1 -exec rm {} \;
+```
+
+`{}` placeholder 
+`+` to terminate command - Append (hence "+") found files to a list, then runs the command once
+`\;` to terminate command - Executes the command once for each file found. Generally slower, but necessary for some commands.
+```bash
+find . -name "*.txt" -exec grep -l "what I looking for " {} +
 ```
 
 ```bash
