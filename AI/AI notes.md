@@ -5,3 +5,7 @@ Prompt - informacje przekazywane sztucznej inteligencji
 * format - w jakim na być przygotowana odpowiedz
 * przykłady - wzór tego co ma przygotować
 * rola - kim ma być AI
+
+Weryfikować informacje
+Okno kontekstowe - czyli ilość informacji jaką przetwarza model
+
