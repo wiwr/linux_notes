@@ -9,3 +9,18 @@ Prompt - informacje przekazywane sztucznej inteligencji
 Weryfikować informacje
 Okno kontekstowe - czyli ilość informacji jaką przetwarza model
 
+### Trigger Words
+* Think deeply
+* Be extremely thorough
+* Double-check your work
+* This is critical to get right
+### Prompt Optimizer
+https://platform.openai.com/docs/guides/prompt-optimizer#optimizing-your-prompt
+
+### Words Matter
+be specific with words
+
+#### Structured Prompting
+like on top. Maybe context can be first and then task before format
+
+#### Self-Reflection Process
