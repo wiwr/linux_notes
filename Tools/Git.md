@@ -259,6 +259,20 @@ git clone <git_repo>
 git clone <git_repo> .
 git clone <git_repo> <folder_name>
 ```
+
+```bash
+git clone --detph=2 "$REPO"
+```
+
+## Sparse
+```bash
+git clone --no-checkout --filter=tree:0 --depth=2 "$REPO"
+cd repo/
+git sprase-checkout set --no-cone folder/
+git checkout
+git sparse-checkout and other_folder/
+```
+
 ## Git fetch
 Get latest changes without merging
 ```bash
@@ -284,6 +298,13 @@ git merge origin/main
 ## Mergetool
 ```bash
 git mergetool
+```
+
+## Merge to repos
+```bash
+git remote add repo2 "$REPO2"
+git fetch repo2
+git merge --allow-unrelated-histories repo2/master
 ```
 ## Git cat-file
 ```bash
@@ -314,10 +335,15 @@ git stash pop
 
 ## Git worktrees
 ```bash
+git branch BName
+git worktree add ../BName
+cd ../BName
+```
+
+```bash
 git worktree add ../foo foo
 git worktree list
 git worktree remove foo
-
 ```
 # Debug
 ### Asking for password
@@ -331,4 +357,44 @@ Change to ssh
 ```bash
 git remote set-url origin git@github.com:wiwr/linux_notes.git
 ```
+### TIG
+need to be install
+```bash
+sudo apt install tig
+```
 
+tool to look on history of commits
+```bash
+tig --author="Name of author"
+```
+
+```bash
+tig <path>
+```
+
+```bash
+tig --no-merge
+```
+
+```bash
+tig balem <file>
+```
+
+```bash
+tig --all
+```
+
+```bash
+tig comit-id
+```
+
+### ETCKEEPER
+```bash
+sudo apt install etckeeper
+```
+to watch /etc
+
+### PRE-COMMIT
+```bash
+sudo apt install pre-commit
+```
