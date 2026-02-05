@@ -24,3 +24,19 @@ be specific with words
 like on top. Maybe context can be first and then task before format
 
 #### Self-Reflection Process
+
+### Master prompt 
+Create master prompt with information who you are and your preferences. AI can be ask to create that prompt. Do that as interview. 
+
+### System prompt
+That is how AI should behave. Add request to not answer when don't know.
+
+### Project Folder
+Create project folder. 
+
+### Canvas
+
+### Custom instruction
+Update custom instruction
+
+### Custom GPT
