@@ -2,6 +2,16 @@
 ```bash
 sudo apt install git
 ```
+## check version of git
+```bash
+git --version
+```
+## Initialize Git
+```bash
+git init
+git init -b main
+```
+
 ## Check git configuration
 ```bash
 git config --global --list
@@ -26,6 +36,10 @@ git config --global init.defaultBranch main
 ```bash
 git config --global --list
 ```
+## to set only locally
+```bash
+git config --local user.email
+```
 ## Configuration file
 ~
 |-.config
@@ -48,6 +62,7 @@ alias giti="git init"
 alias gitcl="git clone"
 ```
 config
+
 ```
 [user]
 	name = <name>
@@ -126,11 +141,6 @@ Host github.com
 	User git
 	IdentityFile ~/.ssh/git_key
 ```
-## Initialize Git
-```bash
-git init
-git init -b main
-```
 
 ## Check status
 ```bash
@@ -138,13 +148,31 @@ git status
 ```
 
 ## Git add
+to stage all changes across the entire project
 ```bash
 git add -A
+git add --all
+```
+to stage the changes within the current directory you're in
+```bash
 git add .
+```
+to stage all visible changes except for deleted files
+```bash
+git add *
+```
+```bash
 git add index.html
 git add index.html style.css
+git add *.txt
 ```
-
+## Git reset
+```bash
+git reset
+```
+```bash
+git reset HEAD~
+```
 ## Git commit
 ```bash
 git commit -m 'Initial commit'
@@ -259,7 +287,10 @@ git clone <git_repo>
 git clone <git_repo> .
 git clone <git_repo> <folder_name>
 ```
-
+example
+```bash
+git clone https://github.com/wiwr/git_2026.git
+```
 ```bash
 git clone --detph=2 "$REPO"
 ```
