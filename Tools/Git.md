@@ -166,12 +166,30 @@ git add index.html
 git add index.html style.css
 git add *.txt
 ```
+## git rm
+```bash
+git rm index.html
+```
+
+```bash
+git rm -f index.html
+```
+```bash
+git rm --cached index.html
+```
+```bash
+git rm -r <directory>
+```
 ## Git reset
 ```bash
 git reset
 ```
 ```bash
 git reset HEAD~
+```
+
+```bash
+git reset --hard
 ```
 ## Git commit
 ```bash
