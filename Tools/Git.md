@@ -223,6 +223,9 @@ git branch -M main
 
 ```bash
 git branch
+```
+
+```bash
 git branch --all
 git branch <name_of_new_branch>
 git branch -vv
