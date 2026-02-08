@@ -215,6 +215,10 @@ git remote
 git remote -v
 ```
 
+### Git diff
+```bash
+git diff <commit_id1> <commit_id2>
+```
 ## Git Branch
 rename branch
 ```bash
@@ -262,6 +266,10 @@ git push -u origin main
 git push
 git push -u origin feature/new_function
 ```
+
+```bash
+git push origin staging
+```
 ## to remove branch
 ```bash
 git branch --all
@@ -301,6 +309,18 @@ alias.acp=!f() { git add . && git commit -m "$1" && git push; }; f
 alias.ac=!f() { git add -A && git commit -m "$1"; }; f 
 alias.acp=!f() { git add -A && git commit -m "$1" && git push; }; f
 ```
+### Git restore
+```bash
+git restore
+```
+```bash
+git restore <folder>
+```
+```bash
+git restore .
+```
+
+/
 ## Git clone
 Get a copy of the full repo on to your machine
 ```bash 
@@ -330,6 +350,14 @@ Get latest changes without merging
 ```bash
 git fetch -p
 ```
+
+```bash
+git fetch
+```
+```bash
+git merge
+```
+
 ## Forking
 Copy a repository into your own account
 
@@ -340,6 +368,11 @@ git merge origin/mian
 git merge --abort
 git merge --continue
 ```
+
+```bash
+git merge main -m "Merging main into currentl"
+```
+### fix merging 
 
 ### git merge remote to local
 ```bash
@@ -382,7 +415,40 @@ git push -u origin main
 ## Stash
 ```bash
 git stash
+```
+
+```bash
 git stash pop
+```
+
+```bash
+git stash pop stash@{0}
+```
+
+```bash
+git stash apply
+```
+
+```bash
+git stash apply stash@{0}
+```
+
+```bash
+git stash list
+```
+
+```bash
+git stash drop
+```
+
+## git rebase 
+```bash
+git rebase main
+```
+
+### Git revert
+```bash
+git revert <commit_id>
 ```
 
 ## Git worktrees
@@ -451,3 +517,11 @@ to watch /etc
 sudo apt install pre-commit
 ```
 
+### fix https to ssh
+```bash
+git remote -v
+```
+
+```bash
+git remote set-url origin <ssh>
+```
