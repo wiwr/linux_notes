@@ -50,3 +50,5 @@ login to each server or copy KHK.
 ```bash
 ansible-playbook playbook.yml -i inventory.ini --ask-pass
 ```
+ above can be run as script. With keys from crontab.
+ 
