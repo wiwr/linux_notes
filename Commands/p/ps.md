@@ -15,6 +15,9 @@ ps -ef -p 2
 ```
 
 ```bash
+ps -fp 22004
+```
+```bash
 ps -ef | grep -v '\[\|]'
 ```
 
