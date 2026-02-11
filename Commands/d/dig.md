@@ -23,3 +23,11 @@ dig +short learnlinux.tv
 dig +ttl learnlinux.tv
 ```
 
+```bash
+dig wireshark.org +dnssec +bufsize=512
+```
+
+```bash
+dig @a.root-servers.net wireshark.org +dnssec +bufsize=512
+```
+
