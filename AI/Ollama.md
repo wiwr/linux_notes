@@ -24,10 +24,21 @@ curl -fsSL https://ollama.com/install.sh | sh
 ollama run llama3.2
 ```
 
-exit
+```bash
+ollama list
 ```
-/bye
+
+```bash
+ollama rm llama3.2
 ```
+
+
+# Commands
+`/bye` - to exit
+`/clear` - to clear session
+`/show info` - to get information about model
+# Tips
+can be added `in short`
 # Example prompt
 ```bash
 >>> how to write prompt for you?
@@ -62,3 +73,6 @@ If you're still unsure, feel free to ask me for clarification or help with your 
 
 
 ```
+
+# Models
+https://ollama.com/search
