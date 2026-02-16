@@ -1,3 +1,7 @@
+# Source for notes
+https://youtu.be/GWB9ApTPTv4?si=LDngtdshQ7SGEr5l
+
+
 # VM
 CPU 4
 Memory 8192
@@ -20,6 +24,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 ```
 
 # Ollama
+## llama3.2
 ```bash
 ollama run llama3.2
 ```
@@ -31,14 +36,90 @@ ollama list
 ```bash
 ollama rm llama3.2
 ```
+## llava:7b
+```bash
+ollama run llava:7b
+```
 
+```txt
+>>> what is this image ./flower_1.jpg
+```
+```txt
+>>> and now write me a short poem about that
+ A sunflower stands tall and proud,
+with petals vibrant yellow and brown,
+It faces towards the sky, like a compass for the day,
+A symbol of joy, on a cloudy day.
 
+Its head is full of seeds, for another plant to grow,
+A life cycle repeating, in the ebb and flow.
+The sunflower blooms with grace and style,
+While we pass by, with a smile.
+
+So let this sunflower be, a reminder of the day,
+To appreciate life and what it has to say. 
+
+```
+### codellama
+
+# Modelfile
+```modelfile
+FROM llama3.2
+
+# set the temperature to 1 [higher is more createive, PARAMETER temperature 1, from 0 to 1]
+PARAMETER temperature 0.3
+
+SYSTEM """
+        You are James, a very smart assistant who answers questions succintly and informatively.
+
+"""
+```
+
+```bash
+ollama create james -f ./Modelfile
+```
+
+```bash
+ollama run james
+```
+
+```bash
+>>> what is your name?
+```
+
+```bash
+ollama rm james
+```
+# API
+### Documentation
+```bash
+github.com/ollama/ollama/blob/main/docs/api.md
+```
+
+as stream
+```bash
+curl http://localhost:11434/api/generate -d '{"model": "llama3.2", "prompt":"Why is the sky blue?"}'
+```
+without stream
+```bash
+curl http://localhost:11434/api/generate -d '{"model":"llama3.2","prompt":"Why is the sky blue?", "stream":false}'
+```
+
+### Chat endpoint
+```bash
+curl http://localhost:11434/api/chat -d '{"model":"llama3.2", "messages": [{"role":"user", "content": "tell me a fun fact about Mozambique"}],"stream":false}'
+```
+### request json
+```bash
+curl http://localhost:11434/api/generate -d '{"model":"llama3.2","prompt":"What color is the sky at different times of the day? Respond using JSON", "format": "json", "stream":false}'
+```
 # Commands
 `/bye` - to exit
 `/clear` - to clear session
 `/show info` - to get information about model
 # Tips
 can be added `in short`
+`can you please be less verbose`
 # Example prompt
 ```bash
 >>> how to write prompt for you?
@@ -76,3 +157,13 @@ If you're still unsure, feel free to ask me for clarification or help with your 
 
 # Models
 https://ollama.com/search
+
+### Useful commands
+```bash
+ssh user@ip
+```
+
+```bash
+scp flower_1.jpg user@ip:/home/user
+```
+
