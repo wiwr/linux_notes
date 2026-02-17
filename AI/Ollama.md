@@ -230,3 +230,64 @@ else:
 pyton3 start-1.py
 ```
 
+### Ollama module
+```bash
+pip install ollama
+```
+
+```python
+import ollama
+
+response = ollama.list()
+
+#print(response)
+res = ollama.chat(
+    model="llama3.2",
+    messages=[
+        {"role": "user", "content": "why is the sky blue?"},
+    ],
+)
+print(res["message"]["content"])
+```
+
+```python
+import ollama
+
+response = ollama.list()
+
+#print(response)
+res = ollama.chat(
+    model="llama3.2",
+    messages=[
+        {"role": "user", "content": "why is the sky blue?"},
+    ],
+    stream=True,
+)
+for chunk in res:
+    print(chunk["message"]["content"], end="", flush=True)
+```
+
+```bash
+python3 start-2.py
+```
+
+```python
+import ollama
+
+modelfile = """
+FROM llama3.2
+PARAMETER temperature 0.1
+"""
+
+ollama.create(model="knowitall",
+              from_="llama3.2",
+              system="You are very smart assistant who knows everything about oceans.",
+              parameters={"temperatura": 0.1})
+res = ollama.generate(model="knowitall", prompt="why is the ocean so solty")
+print(res["response"])
+```
+
+```bash
+python3 create.py
+```
+
