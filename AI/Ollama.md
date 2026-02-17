@@ -167,3 +167,11 @@ ssh user@ip
 scp flower_1.jpg user@ip:/home/user
 ```
 
+# Msty
+
+[[https://msty.ai]]
+
+Download
+Install
+Launch
+
