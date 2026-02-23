@@ -192,6 +192,10 @@ python3 -m venv venv
 ```bash
 source venv/bin/activate
 ```
+
+```bash
+pip install --upgrade pip
+```
 ### remove environment
 ```bash
 rm -rf venv .venv
@@ -356,35 +360,24 @@ python3 categorizer.py
 # RAG
 Create data source
 ```txt
-ollama>=0.1.0
-chromadb==0.6.0
-pdfplumber==0.10.0
-langchain==1.2.10
-langchain-core==1.2.14
-langchain-ollama==1.0.1
-langchain-community==0.4.1
-langchain-text-splitters==1.1.1
+ollama
+chromadb
+pdfplumber
+langchain==0.2.16
+langchain-core==0.2.41
+langchain-ollama==0.1.3
+langchain-community==0.2.16
+langchain_text_splitters
 unstructured
-unstructured[all-docs]==0.8.3
-sentence-transformers==2.2.2
-opencv-python-headless>=4.13.0.90
-elevenlabs==2.36.1
+unstructured[all-docs]
+fastembed
+pikepdf
+sentence-transformers
+elevenlabs
 ```
 
 ```bash
 pip install -r requirements.txt
-```
-
-```bash
-pip uninstall opencv-python
-```
-
-```bash
-pip install opencv-python-headless
-```
-
-```bash
-pip uninstall -y langchain langchain-core langchain-community langchain-classic langchain-ollama langchain-text-splitters
 ```
 
 ```bash
@@ -395,10 +388,6 @@ ollama pull nomic-embed-text
 ollama pull llama3.2
 ```
 
-```bash
-
-```
-
 ```python
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain_community.document_loaders import OnlinePDFLoader
@@ -407,38 +396,36 @@ doc_path = "./data/boi.pdf"
 model = "llama3.2"
 
 if doc_path:
-	loader = UnstructuredPDFLoader(file_path=doc_path)
-	data = loader.load()
-	print("done loading...")
+    loader = UnstructuredPDFLoader(file_path=doc_path)
+    data = loader.load()
+    print("done loading....")
 else:
-	print("Upload a PDF file")
-	
+    print("Upload a PDF file")
+
 content = data[0].page_content
-#print(content[:100])
+# print(content[:100])
 
 from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-#from langchain_community.vectorstores import Chroma
-import chromadb
-chromadb.config.Settings(telemetry_enabled=False)
+from langchain_community.vectorstores import Chroma
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=300)
 chunks = text_splitter.split_documents(data)
-print("done splitting...")
+print("done splitting....")
 
-#print(f"Number of chunks: {len(chunks)}")
-#print(f"Example chunk: {chunks[0]}")
+# print(f"Number of chunks: {len(chunks)}")
+# print(f"Example chunk: {chunks[0]}")
 
 import ollama
+
 ollama.pull("nomic-embed-text")
 
-vector_db = chromadb.from_documents(
-	documents=chunks,
-	embedding=OllamaEmbeddings(model="nomic-embed-text"),
-	collection_name="simple-rag",
-	persist_directory="./chroma_db",
+vector_db = Chroma.from_documents(
+    documents=chunks,
+    embedding=OllamaEmbeddings(model="nomic-embed-text"),
+    collection_name="simple-rag",
 )
-print("done adding to vector database...")
+print("done adding to vector database....")
 
 from langchain_core.prompts import ChatPromptTemplate, PromptTemplate
 from langchain_core.output_parsers import StrOutputParser
@@ -446,35 +433,41 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 
 from langchain_core.runnables import RunnablePassthrough
-from langchain_community.retrievers.multi_query import MultiQueryRetriever
+from langchain.retrievers.multi_query import MultiQueryRetriever
 
 llm = ChatOllama(model=model)
 
 QUERY_PROMPT = PromptTemplate(
-	input_variables=["question"],
-	template="""You are an AI Language model assistant. Your task is to generate five different versions of the given user question to retrieve document from a vector database. By generating multiple perspectives on the user question, your goal is to help the user overcome some of the limitations of the distance-based similarity search. Provide these alternative questions separated by newlines. Original question: {question}""",
+    input_variables=["question"],
+    template="""You are an AI language model assistant. Your task is to generate five different versions of the given user question to retrieve relevant documents from a vector database. By generating multiple perspectives on the user question, your goal is to help the user overcome some of the limitations of the distance-based similarity search. Provide these alternative questions separated by newlines. Original question: {question}""",
 )
 
 retriever = MultiQueryRetriever.from_llm(
-	vector_db.as_retriever(), llm, prompt=QUERY_PROMPT
+    vector_db.as_retriever(), llm, prompt=QUERY_PROMPT
 )
 
 template = """Answer the question based ONLY on the following context:
 {context}
 Question: {question}
 """
+
 prompt = ChatPromptTemplate.from_template(template)
+
 chain = (
-	{"context": retriever, "question": RunnablePassthrough()}
-	| prompt
-	| llm
-	| StrOutputParser()
+    {"context": retriever, "question": RunnablePassthrough()}
+    | prompt
+    | llm
+    | StrOutputParser()
 )
 
-res = chain.invoke({"question": "what is the document about?"})
+res = chain.invoke(input=("what is the document about?",))
 # res = chain.invoke(
-#	input=("what are the main points as a business owner I should be aware off?",)	
-#	)
+#     input=("what are the main points as a business owner I should be aware of?",)
+# )
 #res = chain.invoke(input=("how to report BOI?",))
+
+print("="*30)
 print(res)
+print("="*30)
+
 ```
