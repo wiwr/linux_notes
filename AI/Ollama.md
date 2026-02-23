@@ -192,7 +192,18 @@ python3 -m venv venv
 ```bash
 source venv/bin/activate
 ```
+### remove environment
+```bash
+rm -rf venv .venv
+```
 
+```bash
+pip cache purge
+```
+### exit venv
+```bash
+deactivate
+```
 ## Simple requests
 ```bash
 pip install requests
@@ -346,10 +357,10 @@ python3 categorizer.py
 Create data source
 ```txt
 ollama>=0.1.0
-chromadb==0.5.23
+chromadb==0.6.0
 pdfplumber==0.10.0
 langchain==1.2.10
-langchain-core
+langchain-core==1.2.14
 langchain-ollama==1.0.1
 langchain-community==0.4.1
 langchain-text-splitters==1.1.1
@@ -384,6 +395,10 @@ ollama pull nomic-embed-text
 ollama pull llama3.2
 ```
 
+```bash
+
+```
+
 ```python
 from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain_community.document_loaders import OnlinePDFLoader
@@ -403,7 +418,9 @@ content = data[0].page_content
 
 from langchain_ollama import OllamaEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.vectorstores import Chroma
+#from langchain_community.vectorstores import Chroma
+import chromadb
+chromadb.config.Settings(telemetry_enabled=False)
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1200, chunk_overlap=300)
 chunks = text_splitter.split_documents(data)
@@ -415,7 +432,7 @@ print("done splitting...")
 import ollama
 ollama.pull("nomic-embed-text")
 
-vector_db = Chroma.from_documents(
+vector_db = chromadb.from_documents(
 	documents=chunks,
 	embedding=OllamaEmbeddings(model="nomic-embed-text"),
 	collection_name="simple-rag",
@@ -429,7 +446,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_ollama import ChatOllama
 
 from langchain_core.runnables import RunnablePassthrough
-from langchain.retrievers.multi_query import MultiQueryRetriever
+from langchain_community.retrievers.multi_query import MultiQueryRetriever
 
 llm = ChatOllama(model=model)
 
