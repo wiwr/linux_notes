@@ -469,5 +469,9 @@ res = chain.invoke(input=("what is the document about?",))
 print("="*30)
 print(res)
 print("="*30)
-
 ```
+
+additional steps:
+1) clean code base on tutorial example
+2)  deal with stream line follow tutorial in version that is hosted on headless devices 
+
