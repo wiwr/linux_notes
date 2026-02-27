@@ -74,15 +74,24 @@ print(student.size)
 ```bash
 import os
 
-command = 'ping -c 1'
+host = ['demotywatory.pl', 'amazon.pl']
 
-def ping(host):
-    response = os.popen(f'{command} {host}').read()
-    return response
+command = 'ping -c 1 '
 
 while True:
-    host = input('Host to ping: ')
-    response = ping(host)
-    print(response)
+    print("check started...")
+    page = '''
+            <meta http-equiv="refresh" content="5">
+            <h1>Up/Down Dashboard</h1>
+            '''
+    for site in host:
+        print(f"checking {site}")
+        response = os.popen(f'{command} {site}').read()
+        page += f'<pre>{response}</pre>'
+
+    with open('dashboard.html', 'w') as file:
+        print(f"saved..")
+        file.write(page)
+
 
 ```
