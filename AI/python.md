@@ -42,3 +42,31 @@ else:
 finally:
     print('FINALLY always runs')
 ```
+### Hello
+```bash
+class Message():
+    alert = 'hello world'
+    def hello(name):
+        print(f'Hello {name}')
+    def bye(name):
+        print('Bye')
+
+class Person:
+    def __init__(self, name, age, size):
+        self.name = name
+        self.age = age
+        self.size = size
+
+student = Person('bob',11,'large')
+
+person = 'bob'
+Message.hello(person)
+print(Message.alert)
+
+print(student)
+print(vars(student))
+print(student.name)
+print(student.age)
+print(student.size)
+```
+
