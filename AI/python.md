@@ -131,10 +131,11 @@ def geo():
 
     return response
 
-def ai(query, location):
+def ai(query, locationi, memroy):
     injection = 'Answer in under 20 words'
     query = f'''Follow these instructons: {injection}
                 I am located here: {location}
+                This is our conversation up until now: {memory}
                 This is my question: {query}'''
     response: ChatResponse = chat(model='llama3.2', messages=[
         {
@@ -145,12 +146,17 @@ def ai(query, location):
     return response.message.content
 
 location = geo()
+with open('memory.txt', 'w') as file:
+    file.write('This is the conversation we have had\n\n')
 while True:
     query = input('Query: ')
-    response = ai(query, location)
+    with open('memory.txt', 'r') as file:
+        memory = file.read()
+    response = ai(query, location, memory)
     os.system('clear')
     print(query)
     print(response)
-
-
+    with open('memory.txt', 'a') as file:
+        file.write(f'My Query: {query}\n')
+        file.write(f'your Response: {response}\n\n')
 ```
