@@ -10,6 +10,7 @@ python3 -m venv sd
 pip install requests
 ```
 
+### request
 ```python
 import requests
 import json
@@ -121,13 +122,24 @@ Don't look I'm changing!
 ### ollama_scirpt
 ```python
 from ollama import chat, ChatResponse
+import os
 
-response: ChatResponse = chat(model='llama3.2', messages=[
-    {
-        'role': 'user',
-        'content': 'Why is the sky blue?',
-    },
-])
+def ai(query):
+    injection = 'Answer in under 20 words'
+    query = f'{injection} -- {query}'
+    response: ChatResponse = chat(model='llama3.2', messages=[
+        {
+            'role': 'user',
+            'content': query,
+        },
+    ])
+    return response.message.content
 
-print(response['message']['content'])
+while True:
+    query = input('Query: ')
+    response = ai(query)
+    os.system('clear')
+    print(query)
+    print(response)
+
 ```
