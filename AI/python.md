@@ -117,3 +117,17 @@ with open('joke.html', 'w') as file:
 What did the traffic light say to the car as it passed?
 Don't look I'm changing!
 ```
+
+### ollama_scirpt
+```python
+from ollama import chat, ChatResponse
+
+response: ChatResponse = chat(model='llama3.2', messages=[
+    {
+        'role': 'user',
+        'content': 'Why is the sky blue?',
+    },
+])
+
+print(response['message']['content'])
+```
