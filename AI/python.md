@@ -123,10 +123,19 @@ Don't look I'm changing!
 ```python
 from ollama import chat, ChatResponse
 import os
+import requests
 
-def ai(query):
+def geo():
+    url = 'http://ip-api.com/json/'
+    response = requests.get(url).json()
+
+    return response
+
+def ai(query, location):
     injection = 'Answer in under 20 words'
-    query = f'{injection} -- {query}'
+    query = f'''Follow these instructons: {injection}
+                I am located here: {location}
+                This is my question: {query}'''
     response: ChatResponse = chat(model='llama3.2', messages=[
         {
             'role': 'user',
@@ -135,11 +144,13 @@ def ai(query):
     ])
     return response.message.content
 
+location = geo()
 while True:
     query = input('Query: ')
-    response = ai(query)
+    response = ai(query, location)
     os.system('clear')
     print(query)
     print(response)
+
 
 ```
