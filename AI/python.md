@@ -202,12 +202,14 @@ def title(post):
 
 while True:
     url = input('URL: ')
+    print("scrape faze...")
     text = scrape(url)
     query = f'''
             Write a 200 word blog post about this text: {text}
             '''
-
+    print("post faze...")
     response_post = post(query)
+    print("title faze...")
     response_title = title(text)
 
     print(response_title)
@@ -216,4 +218,5 @@ while True:
     with open('autolog.html', 'a') as file:
         file.write(f'<h1>{response_title}</h1>')
         file.write(f'<p>{response_post}</p>')
+
 ```
