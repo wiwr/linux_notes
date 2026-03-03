@@ -227,5 +227,58 @@ sudo apt install net-tools
 ```
 
 ```bash
+from ollama import chat, ChatResponse
+import os
 
+def ai(query, network):
+    query = f'''Based on this infromation from an apr -a command - {network}
+                What is the answer to this question: {query}'''
+    response: ChatResponse = chat(model='llama3.2', messages=[
+        {
+            'role': 'user',
+            'content': query,
+        },
+    ])
+    return response.message.content
+
+network = os.popen('arp -a').read()
+
+print(network)
+while True:
+    print("="*30)
+    query = input('Question: ')
+    response = ai(query, network)
+    print(query)
+    print(response)
+```
+
+
+```bash
+python3 pingAI.py
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+PING demotywatory.pl (104.26.14.85) 56(84) bytes of data.
+64 bytes from 104.26.14.85: icmp_seq=1 ttl=55 time=19.4 ms
+
+--- demotywatory.pl ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 19.369/19.369/19.369/0.000 ms
+PING onet.pl (13.227.146.66) 56(84) bytes of data.
+64 bytes from server-13-227-146-66.waw51.r.cloudfront.net (13.227.146.66): icmp_seq=1 ttl=245 time=18.3 ms
+
+--- onet.pl ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 18.296/18.296/18.296/0.000 ms
+PING wp.pl (212.77.98.9) 56(84) bytes of data.
+64 bytes from www.wp.pl (212.77.98.9): icmp_seq=1 ttl=56 time=15.0 ms
+
+--- wp.pl ping statistics ---
+1 packets transmitted, 1 received, 0% packet loss, time 0ms
+rtt min/avg/max/mdev = 14.968/14.968/14.968/0.000 ms
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Question: Which is the fastest?
+======================================================================
+Which is the fastest?
+The fastest ping result belongs to wp.pl with a time of 15.0 ms, followed by onet.pl with a time of 18.3 ms and demotywatory.pl with a time of 19.4 ms.
+Question: 
 ```
