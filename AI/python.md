@@ -220,3 +220,12 @@ while True:
         file.write(f'<p>{response_post}</p>')
 
 ```
+
+### check arp
+```bash
+sudo apt install net-tools
+```
+
+```bash
+
+```
