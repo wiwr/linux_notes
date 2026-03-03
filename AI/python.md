@@ -252,6 +252,41 @@ while True:
     print(response)
 ```
 
+### check pings
+```python
+from ollama import chat, ChatResponse
+import os
+
+def ai(query, network):
+    query = f'''Based on this informaiton from a ping command - {network}
+                What is the answer to this question: {query}
+                Answer provide under 50 words'''
+    response: ChatResponse = chat(model='llama3.2', messages=[
+        {
+            'role': 'user',
+            'content': query,
+        },
+    ])
+    return response.message.content
+
+host = ['demotywatory.pl', 'onet.pl', 'wp.pl']
+
+network = ''
+for site in host:
+    response = os.popen(f'ping -c 1 {site}').read()
+    network+=response
+
+print("+"*70)
+print(network)
+print("+"*70)
+while  True:
+    query = input('Question: ')
+    response = ai(query, network)
+    print("="*70)
+    print(query)
+    print(response)
+
+```
 
 ```bash
 python3 pingAI.py
