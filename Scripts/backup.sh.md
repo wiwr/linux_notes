@@ -23,16 +23,17 @@ backup "Backup file with tar" "Backup.tar" "-cf" "toBackup.txt"
 #!/bin/bash
 
 backup_src="/home/witek"
-backup_dest="/mnt/backup/current"
+backup_mount="/mnt/backup"
+backup_dest="$backup_mount/current"
 current_date=$(date +%Y%m%d)
-log_path="/mnt/backup/logs"
-previous_files="/mnt/backup/files_previous/$current_date"
+log_path="$backup_mount/logs"
+previous_files="$backup_mount/files_previous/$current_date"
 
 # use when run with mounted directory
-if ! mountpoint -q /mnt/backup; then
-        echo "Backup directory is not mounted! Exiting!"
-        exit 1
-fi
+#if ! mountpoint -q $backup_mount; then
+#       echo "Backup directory is not mounted! Exiting!"
+#       exit 1
+#fi
 
 # Create required directories
 mkdir -p "$log_path"
@@ -43,7 +44,6 @@ rsync -av --delete --backup \
         --backup-dir="$previous_files" "$backup_src" "$backup_dest" \
         > "$log_path/backup_$current_date.log" \
         2> "$log_path/backup_${current_date}_error.log"
-
 ```
 
 ```bash
