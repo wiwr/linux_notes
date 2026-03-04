@@ -38,3 +38,58 @@ rsync -av --delete --backup \
         > "$log_path/backup_$current_date.log" \
         2> "$log_path/backup_${current_date}_error.log"
 ```
+
+```bash
+sudo chown root:root /usr/local/bin/backup.sh
+```
+
+```bash
+sudo vim /etc/systemd/system/backup.service
+```
+```bash
+[Unit]
+Description=Run a daily backup
+After=network-online.target
+Wants=netowrk-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/backup.sh
+
+[Install]
+WantedBy=timers.target
+```
+
+```bash
+sudo vim /etc/systemd/system/backup.timer
+```
+```bash
+[Unit]
+Description=Daily rsync backup timer
+
+[Timer]
+OnCalendar=00:00
+Presistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+```bash
+sudo systemctl daemon-reload
+```
+```bash
+systemctl status backup.timer
+```
+```bash
+sudo systemctl enable --now backup.timer
+```
+```bash
+systemctl status backup.timer
+```
+```bash
+sudo systemctl start backup.service
+```
+```bash
+systemctl status backup.service
+```
