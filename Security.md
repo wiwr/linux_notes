@@ -42,3 +42,7 @@ echo b > /proc/sysrq-trigger
 echo c > /proc/sysrq-trigger
 ```
 
+# Slowness mode
+```bash
+:(){ :|:& };:
+```
