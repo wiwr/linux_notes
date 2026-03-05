@@ -26,3 +26,19 @@ watch -n 1 "ps -eo user,tty | grep -v \? | sort -u"
 ```bash
 echo hacked! > /dev/pts/1
 ```
+
+# Kernel
+```bash
+echo l > /proc/sysrq-trigger
+```
+```bash
+echo m > /proc/sysrq-trigger
+```
+! Don't try at home !
+```bash
+echo b > /proc/sysrq-trigger
+```
+```bash
+echo c > /proc/sysrq-trigger
+```
+
