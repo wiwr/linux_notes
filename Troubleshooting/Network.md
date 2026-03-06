@@ -8,7 +8,7 @@ ip link
 ```bash
 ip addr
 ```
-[[linux_notes/Commands/ip|ip]]
+[[linux_notes/Commands/i/ip|ip]]
 ```bash
 ping -c5 8.8.8.8
 ```
