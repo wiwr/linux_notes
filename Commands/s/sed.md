@@ -56,4 +56,6 @@ sed 's./etc..' test.txt
 sed -e 's/:/---/g' /etc/passwd
 ```
 
-
+```bash
+sed 's/ba/dilbert/' <<< $0
+```
