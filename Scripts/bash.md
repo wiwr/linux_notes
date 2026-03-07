@@ -33,3 +33,10 @@ vim <(cat file1.txt file2.txt)
 ```
 
 
+```bash
+day=$(date +%A)
+```
+```bash
+echo $(day:0:4)
+```
+
