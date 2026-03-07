@@ -40,3 +40,15 @@ day=$(date +%A)
 echo $(day:0:4)
 ```
 
+```bash
+echo $0
+```
+```bash
+echo ${0^^}
+```
+```bash
+echo ${0^}
+```
+```bash
+echo ${0/ba/dilbert}
+```
