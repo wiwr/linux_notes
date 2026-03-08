@@ -317,3 +317,20 @@ Which is the fastest?
 The fastest ping result belongs to wp.pl with a time of 15.0 ms, followed by onet.pl with a time of 18.3 ms and demotywatory.pl with a time of 19.4 ms.
 Question: 
 ```
+
+
+# SQL
+```bash
+sudo apt install sqlite3
+```
+
+```sqlite
+.help
+```
+```sqlite
+.exit
+```
+
+```bash
+sqlite3 class.db
+```
