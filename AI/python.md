@@ -257,11 +257,20 @@ while True:
 from ollama import chat, ChatResponse
 import os
 
+host = ['demotywatory.pl', 'onet.pl', 'wp.pl']
+
+def stats(list_site):
+    log = ''
+    for site in list_site:
+        response = os.popen(f'ping -c 1 {site}').read()
+        log+=response
+    return log
+
 def ai(query, network):
     query = f'''Based on this informaiton from a ping command - {network}
                 What is the answer to this question: {query}
                 Answer provide under 50 words'''
-    response: ChatResponse = chat(model='llama3.2', messages=[
+    response: ChatResponse = chat(model='gpt-oss', messages=[
         {
             'role': 'user',
             'content': query,
@@ -269,23 +278,13 @@ def ai(query, network):
     ])
     return response.message.content
 
-host = ['demotywatory.pl', 'onet.pl', 'wp.pl']
-
-network = ''
-for site in host:
-    response = os.popen(f'ping -c 1 {site}').read()
-    network+=response
-
-print("+"*70)
-print(network)
-print("+"*70)
 while  True:
     query = input('Question: ')
+    network = stats(host)
     response = ai(query, network)
     print("="*70)
     print(query)
     print(response)
-
 ```
 
 ```bash
