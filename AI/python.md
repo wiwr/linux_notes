@@ -270,7 +270,7 @@ def ai(query, network):
     query = f'''Based on this informaiton from a ping command - {network}
                 What is the answer to this question: {query}
                 Answer provide under 50 words'''
-    response: ChatResponse = chat(model='gpt-oss', messages=[
+    response: ChatResponse = chat(model='llama3.2', messages=[
         {
             'role': 'user',
             'content': query,
@@ -317,7 +317,41 @@ The fastest ping result belongs to wp.pl with a time of 15.0 ms, followed by one
 Question: 
 ```
 
+## top AI
+```python
+from ollama import chat, ChatResponse
+import os
 
+command = 'top -b -n 1 | head -n 30'
+
+response_os = os.popen(command).read()
+
+def ai(response_os, query):
+    query = f'''
+    Answer in under 50 words.\n
+    Answer this question: {query}\n
+    From this data\n
+    This is the response from Top on this machine -- {response_os}\n
+    '''
+
+    response: ChatResponse = chat(model='llama3.2', messages=[
+        {
+            'role': 'user',
+            'content': query,
+        },
+    ])
+
+    return response['message']['content']
+
+while True:
+    query = input('Question: ')
+    response = ai(response_os, query)
+    print('\n')
+    print('*'*20)
+    print('\n')
+    print(query)
+    print(response)
+```
 # SQL
 ```bash
 sudo apt install sqlite3
