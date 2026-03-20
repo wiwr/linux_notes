@@ -52,3 +52,15 @@ echo ${0^}
 ```bash
 echo ${0/ba/dilbert}
 ```
+
+```bash
+#!/usr/bin/env bash
+
+i=0
+while read -r word; do
+	echo "$word"
+	((i++))
+done < <(grep d /usr/share/dict/words)
+
+echo "found $i words"
+```
