@@ -1,0 +1,11 @@
+```bash
+#!/usr/bin/env bash
+
+array=(foo bar baz)
+
+echo "${array[0]}"
+echo "${array[1]}"
+echo "${array[2]}"
+
+
+```
