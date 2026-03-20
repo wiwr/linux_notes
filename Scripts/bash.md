@@ -54,6 +54,13 @@ echo ${0/ba/dilbert}
 ```
 
 ```bash
+echo ~/.bashrc
+```
+```bash
+vim !$
+```
+
+```bash
 #!/usr/bin/env bash
 
 i=0
