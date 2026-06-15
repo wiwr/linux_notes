@@ -1,6 +1,10 @@
 # dig
 [[Linux/Network]]
 
+```
+alias dig='grc dig'
+```
+
 ```bash
 dig learnlinux.tv
 ```
@@ -29,5 +33,28 @@ dig wireshark.org +dnssec +bufsize=512
 
 ```bash
 dig @a.root-servers.net wireshark.org +dnssec +bufsize=512
+```
+
+```
+dig A google.com
+```
+
+```bash
+dig A +noall +answer google.com
+```
+
+```bash
+dig google.com TXT facebook.com MX instagram A
+```
+
+```bash
+dig -f /path/file.list +short
+```
+```bash
+dig -f /path/file.list +noall +answer
+```
+
+```bash
+dig + trace google.com
 ```
 
