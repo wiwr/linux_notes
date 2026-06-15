@@ -40,6 +40,13 @@ sudo tcpdump -i wlp2s0 -v net 192.168.1.0/24 and tcp
 sudo tcpdump -i wlp2s0 -v src port 443 and dst 192.168.1.222
 ```
 
+```bash
+sudo tcpdump -i any tcp port 80'
+```
+
+```bash
+sudo tcpdump -s 0 -A -i any 'tcp port 80 and tcp[((tcp[12:1]&0xf0)>>2):4] = 0x504f5354'
+```
 ### save trafic
 ```bash
 sudo tcpdump -w /tmp/traffic.pcap -i wlp2s0 -v 'tcp and net 192.168.1.0/24'
