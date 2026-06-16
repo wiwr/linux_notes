@@ -18,6 +18,10 @@ nmap -sP 192.168.1.222
 ```bash
 nmap -sP 192.168.1.0/24 | grep "Nmap scan" | awk '{ print $5 }'
 ```
+
+```bash
+sudo nmap 192.168.122.0/24 -sn -n -oA net | grep for | cut -d" " -f5
+```
 ## specific ports
 for single
 ```bash
