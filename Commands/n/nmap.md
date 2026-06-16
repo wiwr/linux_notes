@@ -22,6 +22,11 @@ nmap -sP 192.168.1.0/24 | grep "Nmap scan" | awk '{ print $5 }'
 ```bash
 sudo nmap 192.168.122.0/24 -sn -n -oA net | grep for | cut -d" " -f5
 ```
+
+scan only the 10 most commonly used TCP ports
+```bash
+sudo nmap 192.168.122.192 --top-ports=10
+```
 ## specific ports
 for single
 ```bash
@@ -101,3 +106,6 @@ nmap -sV --script=http-malware-host -p443 192.168.1.222
 ```bash
 nmap -vv 192.168.1.222
 ```
+
+`-sS` - SYN scan
+`-sT` - Connect scan
