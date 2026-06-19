@@ -66,3 +66,7 @@ sudo journalctl --vacuum-time=2d
 ```bash
 sudo journalctl --vacuum-size=10M
 ```
+
+```bash
+sudo journalctl -k -b -1
+```
