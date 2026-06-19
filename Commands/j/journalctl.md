@@ -70,3 +70,9 @@ sudo journalctl --vacuum-size=10M
 ```bash
 sudo journalctl -k -b -1
 ```
+
+# Redirection of journalctl
+```bash
+sudo cat /etc/systemd/journal-upload.conf
+```
+add url for new destination
