@@ -12,6 +12,10 @@ Set manually
 ```bash
 sudo apt update | sudo apt upgrade
 ```
+```bash
+sudo apt dist-upgrade
+```
+
 # SSH
 update configuration file
 	remove login with root
@@ -21,7 +25,10 @@ update configuration file
 ssh-keygen -t ed25519 -C "user@host"
 ```
 ```bash
-ssh-copy-id user@192.168.1.200
+ssh-copy-id -i <pathToKey> <user>@192.168.1.200
+```
+```bash
+sudo systemctl restart ssh
 ```
 
 # Routing
@@ -44,7 +51,10 @@ hostnamectl
 ```bash
 vim /etc/hosts
 ```
-
+add line with 
+```bash
+127.0.1.1           <hostname>
+```
 # Timezone
 ```bash
 timedatectl
@@ -69,13 +79,20 @@ sestatus
 
 # Users
 ```bash
-useradd user
+useradd <user>
 ```
 
 ```bash
-usermod -aG wheel user
+usermod -aG sudo <user>
+```
+or
+```bash
+usermod -aG wheel <user>
+```
+```bash
+groups <user>
 ```
 
 ```bash
-passwd user
+passwd <user>
 ```
