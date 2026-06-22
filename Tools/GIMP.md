@@ -17,3 +17,18 @@ File/Create were are options like:
 * From Clipboard
 * Scanner/Camera...
 * Screenshot...
+
+# Color Dialog Box
+![[Pasted image 20260621234035.png]]
+or use X
+Click to see selection dialog box
+
+# Hide docks
+to do that click Tab
+
+# Tools
+R - Rectangle selection tool
+E - Ellipse B
+Ctrl+B - Bucket fill tool
+Ctrl+Shift+N - add new layer
+
