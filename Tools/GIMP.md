@@ -32,3 +32,9 @@ E - Ellipse B
 Ctrl+B - Bucket fill tool
 Ctrl+Shift+N - add new layer
 
+# Undo
+Ctrl+Z
+
+# Save
+
+# Export
