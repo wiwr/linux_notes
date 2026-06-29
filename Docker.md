@@ -30,3 +30,10 @@ CMD ["btop"]
 ```bash
 docker build -t btop-image .
 ```
+
+# Notes from Full DevOps Course for Docker
+## VM
+System: Ubuntu 24.04
+Memory: 4096
+CPUs: 2
+Storage: 100MB not allocated 
