@@ -85,3 +85,45 @@ sudo systemctl start docker
 ```bash
 sudo docker run hello-world
 ```
+
+# Basic Docker Commands
+## docker pull
+```bash
+docker pull [OPTIONS] IMAGE[:TAG|@DIGEST]
+```
+Example:
+```bash
+docker pull ubuntu
+```
+```bash
+docker pull ubuntu:20.04
+```
+```bash
+docker pull --all-tags ubuntu
+```
+## docker images 
+```bash
+docker images [OPTIONS]
+```
+
+Examples:
+```bash
+docker images
+```
+```bash
+docker images -q
+```
+## docker ps
+```bash
+docker ps [OPTIONS]
+```
+
+Examples:
+```bash
+docker ps
+```
+```bash
+docker ps -a
+```
+
+
