@@ -43,6 +43,12 @@ Storage: 100MB not allocated
 sudo apt update
 ```
 ```bash
+sudo apt upgrade
+```
+```bash
+sudo apt autoremove -y
+```
+```bash
 sudo apt install ca-certificates curl
 ```
 ```bash
@@ -68,7 +74,7 @@ EOF
 sudo apt update
 ```
 ```bash
-sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin -y
 ```
 ```bash
 sudo systemctl status docker
