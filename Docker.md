@@ -85,7 +85,9 @@ sudo systemctl start docker
 ```bash
 sudo docker run hello-world
 ```
-
+```bash
+sudo su
+```
 # Basic Docker Commands
 ## docker pull
 ```bash
@@ -126,4 +128,44 @@ docker ps
 docker ps -a
 ```
 
+## docker create
+```bash
+docker create [OPTION] IMAGE [COMMAND] [ARG...]
+```
+Examples:
+```bash
+docker create --name my-container hignx
+```
+```bash
+docker create --name my-container ubuntu:20.04
+```
+## docker start
+```bash
+docker start [OPTIONS] CONTAINER [CONTAINER...]
+```
 
+Examples:
+```bash
+docker start my-container
+```
+```bash
+docker start abc1234
+```
+```bash
+docker start container1 container2 ...
+```
+
+## docker stop
+```bash
+docker stop [OPTIONS] CONTAINER [CONTAINER ...]
+```
+Examples:
+```bash
+docker stop my-container
+```
+```bash
+docker stop -t 30 my-container
+```
+```bash
+docker stop container1 container2
+```
