@@ -158,7 +158,7 @@ docker start container1 container2 ...
 ## docker stop
 ```bash
 docker stop [OPTIONS] CONTAINER [CONTAINER ...]
-```
+d```
 Examples:
 ```bash
 docker stop my-container
@@ -186,6 +186,23 @@ docker exce -i my-container cat /etc/hostname
 ```
 ```bash
 docker exce -it my-container /bin/bash
+```
+## docker rm
+```bash
+docker rm CONTAINER
+```
+Example:
+```bash
+docker rm my-container
+```
+
+## docker rmi
+```bash
+docker rmi CONTAINER
+```
+Example:
+```bash
+docker rmi my-conatiner
 ```
 # Linux commands
 ## ps
