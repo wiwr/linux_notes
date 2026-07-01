@@ -170,6 +170,23 @@ docker stop -t 30 my-container
 docker stop container1 container2
 ```
 
+## docker exec
+```bash
+docker exec [OPTIONS] CONTAINER COMMAND [ARG...]
+```
+Example
+```bash
+docker exec my-container ls /usr/src/app
+```
+```bash
+docker exec -t my-container ls /app
+```
+```bash
+docker exce -i my-container cat /etc/hostname
+```
+```bash
+docker exce -it my-container /bin/bash
+```
 # Linux commands
 ## ps
 ```bash
