@@ -169,3 +169,23 @@ docker stop -t 30 my-container
 ```bash
 docker stop container1 container2
 ```
+
+# Linux commands
+## ps
+```bash
+ps [OPTIONS]
+```
+
+Examples
+```bash
+ps a
+```
+```bash
+ps -A
+```
+```bash
+ps x
+```
+```bash
+ps u
+```
