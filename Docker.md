@@ -204,6 +204,26 @@ Example:
 ```bash
 docker rmi my-conatiner
 ```
+## docker run
+```bash
+docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+```
+Example:
+```bash
+docker run nginx
+```
+```bash
+docker run --name my-container ubuntu:20.04
+```
+```bash
+docker run -d nginx
+```
+```bash
+docker run -it ubuntu /bin/bash
+```
+```bash
+docker run -it ubuntu bash
+```
 # Linux commands
 ## ps
 ```bash
