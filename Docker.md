@@ -224,6 +224,12 @@ docker run -it ubuntu /bin/bash
 ```bash
 docker run -it ubuntu bash
 ```
+```bash
+docker run --rm ubuntu echo "this will self-destruct"
+```
+```bash
+docker run -it --rm ubuntu bash
+```
 # Linux commands
 ## ps
 ```bash
