@@ -230,6 +230,19 @@ docker run --rm ubuntu echo "this will self-destruct"
 ```bash
 docker run -it --rm ubuntu bash
 ```
+
+## docker inspect
+```bash
+docker inspect [OPTIONS] OBJECT [OBJECT...]
+```
+Example:
+```bash
+docker inspect my-container
+```
+```bash
+docker inpect nginx:latest
+```
+
 # Linux commands
 ## ps
 ```bash
