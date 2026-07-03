@@ -296,3 +296,12 @@ ps x
 ```bash
 ps u
 ```
+
+# Docker file
+Example
+```Dockerfile
+FROM ubuntu
+MAINTAINER Jan Nowak
+RUN apt-get update
+CMD ["echo", "Hello from Dockerfile]
+```
