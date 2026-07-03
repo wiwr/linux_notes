@@ -259,6 +259,24 @@ docker logs my-container
 ```bash
 docker logs -f my-container
 ```
+
+## docker --help
+```bash
+docker --help
+```
+Example:
+```bash
+docker run --help
+```
+
+## docker image prune
+```bash
+docker image prune [OPTIONS]
+```
+Example:
+```bash
+docker image purne
+```
 # Linux commands
 ## ps
 ```bash
