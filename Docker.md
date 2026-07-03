@@ -189,20 +189,25 @@ docker exce -it my-container /bin/bash
 ```
 ## docker rm
 ```bash
-docker rm CONTAINER
+docker rm [OPTIONS] CONTAINER [CONTAINER...]
 ```
 Example:
 ```bash
 docker rm my-container
 ```
-
+```bash
+docker rm -f my-container
+```
 ## docker rmi
 ```bash
-docker rmi CONTAINER
+docker rmi [OPTIONS] IMAGE [IMAGE...]
 ```
 Example:
 ```bash
-docker rmi my-conatiner
+docker rmi my-image
+```
+```bash
+docker rmi -f my-image
 ```
 ## docker run
 ```bash
@@ -243,6 +248,17 @@ docker inspect my-container
 docker inpect nginx:latest
 ```
 
+## docker logs
+```bash
+docker logs [OPTIONS] CONTAINER
+```
+Example
+```bash
+docker logs my-container
+```
+```bash
+docker logs -f my-container
+```
 # Linux commands
 ## ps
 ```bash
