@@ -319,3 +319,19 @@ MAINTAINER Jan Nowak
 RUN apt-get update
 CMD ["echo", "Hello from Dockerfile]
 ```
+
+# Build example
+## Docker file
+```Dockerfile
+FROM alpine
+CMD ["echo", "Welcome", "Hello From Dockerfile"]
+```
+```bash
+docker build -t image1 .d
+```
+```bash
+docker pull alpine
+```
+```bash
+docker history alpine
+```
