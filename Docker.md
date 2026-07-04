@@ -128,6 +128,20 @@ docker ps
 docker ps -a
 ```
 
+## docker build
+```bash
+docker build [OPTIONS] PATH | URL | -
+```
+Examples:
+```bash
+docker build -t myapp .
+```
+```bash
+docker build -f files/test.txt -t image3 /imagefiles
+```
+```bash
+docker build -f /home/ubuntu/apps/image/text.txt -t image3 /home/ubuntu/build/contextfiles/app1
+```
 ## docker create
 ```bash
 docker create [OPTION] IMAGE [COMMAND] [ARG...]
