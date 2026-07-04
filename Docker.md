@@ -327,11 +327,17 @@ FROM alpine
 CMD ["echo", "Welcome", "Hello From Dockerfile"]
 ```
 ```bash
-docker build -t image1 .d
+docker build -t image1 .
 ```
 ```bash
 docker pull alpine
 ```
 ```bash
 docker history alpine
+```
+```bash
+docker history image1
+```
+```bash
+docker run image1
 ```
