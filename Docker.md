@@ -350,3 +350,25 @@ RUN apt-get install -y vim
 RUN apt-get install -y git
 CMD ["echo", "This is an Ubuntu Image with VIM and Git installed"]
 ```
+
+```bash
+docker pull ubuntu:22.04
+```
+```bash
+docker build -t image2 .
+```
+```bash
+docker history image2
+```
+```bash
+docker run -it image2 /bin/bash
+```
+```bash
+exit
+```
+```bash
+docker start image2
+```
+```bash
+docker exec -it image2 bash
+```
