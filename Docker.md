@@ -341,3 +341,12 @@ docker history image1
 ```bash
 docker run image1
 ```
+## Second build example
+### Dockerfile
+```Dockerfile
+FROM ubuntu:22.04
+RUN apt-get update
+RUN apt-get install -y vim
+RUN apt-get install -y git
+CMD ["echo", "This is an Ubuntu Image with VIM and Git installed"]
+```
