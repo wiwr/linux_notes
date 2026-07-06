@@ -319,6 +319,15 @@ MAINTAINER Jan Nowak
 RUN apt-get update
 CMD ["echo", "Hello from Dockerfile]
 ```
+### Structure
+The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime not publish
+```text
+EXPOSE <port>
+```
+Example
+```Dockerfile
+EXPOSE 80 440 
+```
 
 # Build example
 ## Docker file
