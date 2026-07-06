@@ -346,6 +346,17 @@ COPY app/utils /app/code/utils
 ```Dockerfile
 COPY app/main.py /app/code/
 ```
+### WORKDIR
+WORKDIR is used to define the working directory of the docker container at any given time
+```text
+WORKDIR </path>
+```
+Example
+```Dockerfile
+COPY app/mian.py /usr/src/app/code/
+WORKDIR /usr/src/app/code
+CMD ["python3", "main.py"]
+```
 # Build example
 ## Docker file
 ```Dockerfile
