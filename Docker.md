@@ -319,7 +319,8 @@ MAINTAINER Jan Nowak
 RUN apt-get update
 CMD ["echo", "Hello from Dockerfile]
 ```
-### Structure
+## Structure
+### EXPOSE
 The EXPOSE instruction informs Docker that the container listens on the specified network ports at runtime not publish
 ```text
 EXPOSE <port>
@@ -329,6 +330,19 @@ Example
 EXPOSE 80 440 
 ```
 
+### COPY
+The COPY instruction copies new files or directories from \<src\> and adds them to the filesystem of the container at the path \<dest\>. Only from build context
+
+```text
+COPY <src> <dest>
+```
+Example 
+```Dockerfile
+COPY app/utils /app/code/utils
+```
+```Dockerfile
+COPY app/main.py /app/code/
+```
 # Build example
 ## Docker file
 ```Dockerfile
