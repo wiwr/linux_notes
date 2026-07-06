@@ -329,7 +329,10 @@ Example
 ```Dockerfile
 EXPOSE 80 440 
 ```
-
+that fill required to do
+```bash
+docker run -p 80:80 images1
+```
 ### COPY
 The COPY instruction copies new files or directories from \<src\> and adds them to the filesystem of the container at the path \<dest\>. Only from build context
 
