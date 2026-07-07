@@ -375,6 +375,10 @@ ENV action=ping
 ENV target=8.8.8.8
 CMD ["sh", "-c", "exec $action %target"]
 ```
+```bash
+docker run -e action=curl -e target=10.10.1.1 image1
+```
+
 # Build example
 ## Docker file
 ```Dockerfile
