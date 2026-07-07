@@ -378,7 +378,15 @@ CMD ["sh", "-c", "exec $action %target"]
 ```bash
 docker run -e action=curl -e target=10.10.1.1 image1
 ```
-
+### LABEL
+The LABLE instruction in Docker is a way to add metadata to an image
+```text
+LABEL key="value"
+```
+Exampe:
+```Dockerfile
+LABEL Owner="<Owner name and contact details>"
+```
 # Build example
 ## Docker file
 ```Dockerfile
