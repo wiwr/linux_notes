@@ -357,6 +357,24 @@ COPY app/mian.py /usr/src/app/code/
 WORKDIR /usr/src/app/code
 CMD ["python3", "main.py"]
 ```
+
+### ENV
+The ENV instruction allows for setting environment variables for the Docker container
+```text
+ENV <key> <value>
+```
+Example:
+```Dockerfile
+ENV name=Dockerfile
+CMD ["echo", "$name"]
+```
+```Dockerfile
+FROM alpine
+RUN apk add --no-cache iputils curl
+ENV action=ping
+ENV target=8.8.8.8
+CMD ["sh", "-c", "exec $action %target"]
+```
 # Build example
 ## Docker file
 ```Dockerfile
