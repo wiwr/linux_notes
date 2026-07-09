@@ -451,3 +451,36 @@ docker exec -it image2 bash
 ```text
 [registry/][username_or_org/]repository[:tag]
 ```
+
+## Docker tag
+```text
+docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]
+```
+Example
+```Bash
+docker tag python:3.10 my-python-app:latest
+```
+
+```text
+docker tag SOURCE_IMAGE REGISTRY_HOST/USERNAME/REPO:TAG
+```
+Example:
+```bash
+docker tag myapp registry.mycorp.com/devops/myapp:1.0.0
+```
+
+# Docker login
+```bash
+docker login Registry_Host
+```
+
+## with Dockerhub
+```bash
+docker tag LOCAL_IMAGE_NAME:tag USERNAME/REPO:TAG
+```
+Example
+```bash
+docker tadg myimage myusername/myapp:latest
+```
+
+
