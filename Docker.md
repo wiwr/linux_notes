@@ -484,3 +484,11 @@ docker tadg myimage myusername/myapp:latest
 ```
 
 
+## docker push
+```text
+docker push [REGISTRY_HOST]/USERNAME/REPO:TAG
+```
+Example
+```bash
+docker push myapp myusername/myapp:latest
+```
