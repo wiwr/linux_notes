@@ -446,3 +446,8 @@ docker start image2
 ```bash
 docker exec -it image2 bash
 ```
+
+# Docker registry
+```text
+[registry/][username_or_org/]repository[:tag]
+```
