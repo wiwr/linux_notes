@@ -468,14 +468,16 @@ Example:
 ```bash
 docker tag myapp registry.mycorp.com/devops/myapp:1.0.0
 ```
-
+```bash
+docker tag hello-world:latest myrepo/hw:v1
+```
 # Docker login
 ```text
 docker login [Registry_Host]
 ```
 Example 
 ```bash
-docker login
+docker logindock
 ```
 
 ## with Dockerhub
@@ -495,4 +497,7 @@ docker push [REGISTRY_HOST]/USERNAME/REPO:TAG
 Example
 ```bash
 docker push myapp myusername/myapp:latest
+```
+```bash
+docker push myrepo/hw:v1
 ```
