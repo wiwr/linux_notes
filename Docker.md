@@ -470,8 +470,12 @@ docker tag myapp registry.mycorp.com/devops/myapp:1.0.0
 ```
 
 # Docker login
+```text
+docker login [Registry_Host]
+```
+Example 
 ```bash
-docker login Registry_Host
+docker login
 ```
 
 ## with Dockerhub
