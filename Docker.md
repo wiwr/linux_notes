@@ -503,6 +503,37 @@ docker push myrepo/hw:v1
 ```
 
 # Docker Network
+
+## Network commands
+
+```bash
+ip a
+```
+```bash
+docker network ls
+```
+
+```bash
+docker network create <name>
+```
+
+```bash
+docker network create --subnet 10.0.0.0/16 <network-name>
+```
+
+```bash
+docker network inspect <network-name or ID>
+```
+
+```bash
+docker run --network <network-name> <image-name>
+```
+```bash
+docker network connect <network-name> <container-name>
+```
+```bash
+docker network disconnect <netowrk-name> <container-name>
+```
 ## Docker Network Modes
 
 ### Bridge
