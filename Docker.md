@@ -501,3 +501,29 @@ docker push myapp myusername/myapp:latest
 ```bash
 docker push myrepo/hw:v1
 ```
+
+# Docker Network
+## Docker Network Modes
+
+### Bridge
+Containers connected to the same bridge network can communicate
+Default is docker0 and all containers are assigned by default.
+virtual interface (veth)
+### Host
+
+
+### None
+
+
+### Overlay
+
+
+### ipvlan
+
+
+### Macvian
+
+
+### Userdefined
+
+
