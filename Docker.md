@@ -557,4 +557,38 @@ virtual interface (veth)
 
 ### Userdefined
 
+# Persisting data
+## Volumes
+
+Default location
+```bash
+/var/lib/docker/vlumes/<volume-name>/_data/
+```
+
+```bash
+docker volume create <volume-name>
+```
+
+```bash
+docker volume ls
+```
+
+```bash
+docker volume inspect <volume-name>
+```
+
+```bash
+docker volume rm <volume-name>
+```
+
+to mount
+```text
+-v [volume-name]:[container-directory]
+```
+Example:
+```bash
+docker run -v mydata:/app/data ubuntu
+```
+## Bind Mounting
+
 
