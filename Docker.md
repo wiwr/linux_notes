@@ -568,6 +568,10 @@ Default location
 ```bash
 docker volume create <volume-name>
 ```
+example:
+```bash
+docker volume create volume1
+```
 
 ```bash
 docker volume ls
@@ -581,9 +585,17 @@ docker volume inspect <volume-name>
 docker volume rm <volume-name>
 ```
 
+```bash
+docker run --rm -v volume1:/data ubuntu bash -c "echo 'To store in file' > /data/myfile.txt"
+```
+
 to mount
 ```text
 -v [volume-name]:[container-directory]
+```
+```text
+--volumes-from container1
+```
 ```
 Example:
 ```bash
