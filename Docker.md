@@ -602,5 +602,14 @@ Example:
 docker run -v mydata:/app/data ubuntu
 ```
 ## Bind Mounting
-
+Bind mounting is simply linking a host path or file to a container path or file
+```bash
+docker run -v /home/user/project:/app ubuntu
+```
+```bash
+docker run -v $(pwd):/app ubuntu
+```
+```bash
+docker run -v /home/user/nginx.conf:/etc/nginx/nginx.conf nginx
+```
 
