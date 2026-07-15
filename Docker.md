@@ -613,3 +613,30 @@ docker run -v $(pwd):/app ubuntu
 docker run -v /home/user/nginx.conf:/etc/nginx/nginx.conf nginx
 ```
 
+# Docker Compose
+
+### Docker Compose File Structure
+```Dockercompose
+services:
+  database:
+    image: mysql
+    container_name: mydb
+    volumes:
+      - hostPath:containerPath
+      - volumeName:containerPath
+      - :containerPath
+        
+  frontedn:
+    build: .
+    ports:
+      - "3000:5000"
+    
+  backend:
+    build:
+      context: /user/project/app
+      dockerfile: fileconfig
+volumes:
+  volumeName:
+```
+
+Doc
