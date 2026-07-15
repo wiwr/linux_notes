@@ -639,4 +639,36 @@ volumes:
   volumeName:
 ```
 
-Doc
+### Docker Compose commands
+```bash
+docker compose build
+```
+
+```bash
+docker compose run <service-name>
+```
+
+```bash
+docker compose up
+```
+
+```bash
+docker compose -f <file-name> up
+```
+
+```bash
+docker compose down
+```
+
+```bash
+docker compose down --volumes
+```
+
+```bash
+docker compose down --remove-orphans
+```
+
+```bash
+docker compose down --vlumes --remove-orphans
+```
+
