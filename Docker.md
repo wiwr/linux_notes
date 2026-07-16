@@ -671,4 +671,25 @@ docker compose down --remove-orphans
 ```bash
 docker compose down --vlumes --remove-orphans
 ```
-
+# Example project steps
+1) Create application code
+2) Create docker file
+```Dockerfile
+FROM nginx:latest
+COPY ./webpage /usr/share/nginx/html
+EXPOSE 80
+```
+3) Run app
+```bash
+docker run -d -p 80:80 --name myweb myweb
+```
+4) Push to docker hub
+```bash
+docker tag myweb myuser/mywebpage:latest
+```
+```bash
+docker login
+```
+```bash
+docker push myuser/mywebpage
+```
