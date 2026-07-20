@@ -1,4 +1,12 @@
 ```bash
+pstree
+```
+
+```bash
+pstree -p
+```
+
+```bash
 pstree <pid>
 ```
 
