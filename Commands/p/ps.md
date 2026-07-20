@@ -3,6 +3,10 @@ ps -ef
 ```
 
 ```bash
+ps aux
+```
+
+```bash
 ps -eo user,pid,ppid,cmd
 ```
 
@@ -44,6 +48,21 @@ export NORMAL_CMDS="zsh,bat,less,ps"
 ps -f --ppid 1 -C $NORMAL_CMDS --deselect
 ```
 
+### sort
 ```bash
 ps ef --sort=start_time
+```
+
+```bash
+ps aux --sort=%cpu
+```
+```bash
+ps aux --sort=-%cpu
+```
+
+```bash
+ps aux --sort=%mem
+```
+```bash
+ps aux --sort=-%mem
 ```
