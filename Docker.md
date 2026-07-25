@@ -249,7 +249,15 @@ docker run --rm ubuntu echo "this will self-destruct"
 ```bash
 docker run -it --rm ubuntu bash
 ```
-
+#### docker run with limited resources 
+```bash
+docker run -d --name my-container \
+--publish 8080:8080 \
+--memory 200m \
+--memory-swap 1G \
+--cpu-shares 1024 \
+container:last
+```
 ## docker inspect
 ```bash
 docker inspect [OPTIONS] OBJECT [OBJECT...]
