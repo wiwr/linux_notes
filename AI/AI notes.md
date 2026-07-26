@@ -9,6 +9,11 @@ Prompt - informacje przekazywane sztucznej inteligencji
 Weryfikować informacje
 Okno kontekstowe - czyli ilość informacji jaką przetwarza model
 
+### Rules
+1) don't trust when model is self confident in answer
+2) Ask in right why. Not to deal with >>sykofancjia<<. Ask to validate or neutral
+3) Give right to say "I don't know"
+4) ask for sources
 ### Trigger Words
 * Think deeply
 * Be extremely thorough
