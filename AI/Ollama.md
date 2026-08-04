@@ -475,3 +475,6 @@ additional steps:
 1) clean code base on tutorial example
 2)  deal with stream line follow tutorial in version that is hosted on headless devices 
 
+# Run Ollama without Internet connection
+
+![[Pasted image 20260804222508.png]]
