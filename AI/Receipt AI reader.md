@@ -143,3 +143,43 @@ def classify_item(name):
 
     return "other"
 ```
+
+# Second verison
+## Step 1 – Create the project
+```bash
+mkdir receipt-ai
+```
+```bash
+cd receipt-ai
+```
+```bash
+python3 -m venv .venv
+```
+```bash
+source .venv/bin/activate
+```
+## Install dependencies
+```bash
+pip install \
+    fastapi \
+    uvicorn \
+    sqlalchemy \
+    alembic \
+    jinja2 \
+    python-multipart \
+    pydantic-settings \
+    loguru \
+    httpx \
+    pillow \
+    opencv-python \
+    pymupdf \
+    paddleocr \
+    paddlepaddle \
+    sentence-transformers \
+    ollama \
+    rapidfuzz \
+    openpyxl \
+    pandas \
+    pytest \
+    pytest-cov
+```
