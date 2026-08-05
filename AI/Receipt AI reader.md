@@ -183,3 +183,35 @@ pip install \
     pytest \
     pytest-cov
 ```
+```bash
+pip freeze > requirements.txt
+```
+## Step 2 – Create the directory tree
+```bash
+mkdir -p {app/{api,core,database,models,repositories,services/{categorizer,embeddings,llm,ocr,parser},static/{css,js,uploads},templates},config,data,docs,logs,scripts,temp,tests}
+```
+## Step 3 – Git
+```bash
+git init
+```
+```bash
+vim .gitignore
+```
+```vim
+.venv/
+__pycache__/
+*.pyc
+
+logs/
+temp/
+data/*.db
+
+.idea/
+.vscode/
+
+.coverage
+.pytest_cache/
+
+app/static/uploads/
+```
+
