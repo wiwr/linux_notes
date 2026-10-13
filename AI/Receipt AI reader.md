@@ -188,7 +188,7 @@ pip freeze > requirements.txt
 ```
 ## Step 2 – Create the directory tree
 ```bash
-mkdir -p {app/{api,core,database,models,repositories,services/{categorizer,embeddings,llm,ocr,parser},static/{css,js,uploads},templates},config,data,docs,logs,scripts,temp,tests}
+mkdir -p receipt-ai/{app/{api,core,database,models,repositories,services/{categorizer,embeddings,llm,ocr,parser},static/{css,js,uploads},templates},config,data,docs,logs,scripts,temp,tests}
 ```
 ## Step 3 – Git
 ```bash
@@ -215,3 +215,36 @@ data/*.db
 app/static/uploads/
 ```
 
+## Step 4 – pyproject.toml
+```toml
+[project]
+name = "receipt-ai"
+version = "0.0.1"
+
+requires-python = ">=3.12"
+
+description = "Offline Receipt AI"
+
+dependencies = []
+```
+## Step 5 – Configuration
+```bash
+vim config/config.yaml
+```
+```yaml
+server:
+  host: 0.0.0.0
+  port: 8000
+
+database:
+  url: sqlite:///data/receipt.db
+
+ocr:
+  language: pl
+
+llm:
+  model: qwen2.5:3b
+
+processing:
+  delete_uploaded_files: true
+```
