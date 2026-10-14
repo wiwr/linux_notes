@@ -53,3 +53,7 @@ sudo ip link set enp1s0 down
 ```bash
 sudo ip link set enp1s0 up
 ```
+
+```bash
+ip r
+```
