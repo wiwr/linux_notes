@@ -25,3 +25,7 @@ tree -L 1
 ```bash
 tree -if
 ```
+
+```bash
+tree -d -L 1
+```

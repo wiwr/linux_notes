@@ -22,3 +22,6 @@ free -ht
 free -hs 1
 ```
 
+```bash
+cat /proc/meminfo
+```
