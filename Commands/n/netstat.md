@@ -18,3 +18,7 @@ only udp
 ```bash
 netstat -u
 ```
+
+```bash
+netstat -tuln
+```
