@@ -1,0 +1,3 @@
+```bash
+apt list --installed
+```
