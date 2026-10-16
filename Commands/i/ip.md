@@ -14,6 +14,10 @@ ip addr show dev enp2s0
 ```
 
 ```bash
+sudo ip link show
+```
+
+```bash
 sudo ip link set enp2s0 down
 ```
 ```bash
