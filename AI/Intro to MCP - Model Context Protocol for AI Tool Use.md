@@ -49,5 +49,13 @@ server_params = StdioServerParameters(
 	args=[MCP_SERVER],
 )
 
-
+def mcp_tools_to_ollama_format(mcp_tools):
+	tools = []
+	for t in mcp_tools:
+		tools.append({
+			"type": "function",
+			"function": {
+				"name": t.name,
+				"description": t.description or "",
+				"paramters": t.input_schema or {"type": "object", }}})
 ```
