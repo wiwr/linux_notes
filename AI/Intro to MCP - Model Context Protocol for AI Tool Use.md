@@ -40,4 +40,14 @@ import ollama
 import subprocess
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
+
+OLLAMA_MODEL = "granite4.1:3b"
+MCP_SERVER = "mcp-server-system-health.py"
+
+server_params = StdioServerParameters(
+	command="pyton3",
+	args=[MCP_SERVER],
+)
+
+
 ```
