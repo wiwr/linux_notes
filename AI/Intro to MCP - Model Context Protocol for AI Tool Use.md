@@ -107,5 +107,12 @@ async def query_ai(query):
 					result = final["message"]["content"]
 				else:
 					result = msg["content"]
-	return result			
+	return result
+	
+while True:
+	query = input('Query About System: ')
+	subprocess.run(['clear'])
+	response = asyncio.run(query_ai(query))
+	print(query)
+	print(response)			
 ```
