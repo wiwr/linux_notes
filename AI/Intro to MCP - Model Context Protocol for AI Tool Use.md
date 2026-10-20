@@ -57,5 +57,55 @@ def mcp_tools_to_ollama_format(mcp_tools):
 			"function": {
 				"name": t.name,
 				"description": t.description or "",
-				"paramters": t.input_schema or {"type": "object", }}})
+				"paramters": t.input_schema or {"type": "object", "properties": {}},
+			},
+		})
+	return tools
+	
+async def query_ai(query):
+	async with stdio_client(server_params) as (read, write):
+		async with ClientSession(read, write) as session:
+			await session.initialize()
+			tools_result = await session.list_tools()
+			ollama_tools = mcp_tools_to_ollama_format(tools_result.tools)
+			
+			messages = [
+				{
+					"role": "system",
+					"content": "You are a helpful assistant with acess to local system tools adn automation. "
+					"Use the provided tools to answer the user's request whenever necessary. "
+					"Be brief"
+				},
+				{"role": "user", "content": query}
+			]
+			for _ in range(10):
+				response = ollama.chat(
+					model=OLLAMA_MODEL,
+					messages=messages,
+					tools=ollama_tools,
+				)
+				
+				msg = response["message"]
+				messages.append(msg)
+				
+				if msg.get("tool_calls"):
+					for call in msg["tool_calls"]:
+						name = call["function"]["name"]
+						args = call["function"]["arguments"]
+						
+						result = await session.call_tool(name, arguments=args)
+						tool_output = "".join(
+							c.text for c in result.content if hasattr(c, "text")
+						)
+						messages.append({
+							"role": "tool",
+							"content": tool_output,
+							"name": name,
+						})
+						
+					final = ollama.chat(model=OLLAMA_MODEL, messages=messages)
+					result = final["message"]["content"]
+				else:
+					result = msg["content"]
+	return result			
 ```
