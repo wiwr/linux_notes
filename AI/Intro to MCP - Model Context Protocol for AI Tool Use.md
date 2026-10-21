@@ -1,5 +1,5 @@
 notes for https://www.youtube.com/watch?v=TXrZ0ymjbZs
-
+git repo of SiliconDojo for MCP https://github.com/SiliconDojo/In-Person-Classes/tree/main/MCP%20-%20Model%20Context%20Protocol
 I will try to do that on VM with limited resources 
 # VM
 CPU 4
