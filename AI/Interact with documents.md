@@ -46,3 +46,13 @@ http://192.168.122.58:8080
 ```
 
 Then create admin account
+
+```bash
+ollama pull nomic-embed-text
+```
+
+Check how to add memory to ai
+Go to Settings / Personalization / Memory
+Go to Admin Panel / Settings / Documents / Embedding Model Engine and set to Ollama
+in Embedding Model put nomic-embed- text
+then Retrival enable "Full Context Mode"
