@@ -56,3 +56,4 @@ Go to Settings / Personalization / Memory
 Go to Admin Panel / Settings / Documents / Embedding Model Engine and set to Ollama
 in Embedding Model put nomic-embed- text
 then Retrival enable "Full Context Mode"
+set chunk size to 256 and overlap to 15%
