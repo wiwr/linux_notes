@@ -57,3 +57,8 @@ Go to Admin Panel / Settings / Documents / Embedding Model Engine and set to Oll
 in Embedding Model put nomic-embed- text
 then Retrival enable "Full Context Mode"
 set chunk size to 256 and overlap to 15%
+
+## Create Knowledge base
+Go to Workspace/Knowledge and Create
+Then upload files
+
