@@ -25,3 +25,7 @@ cat << 'EOF'
 > Line with $HOME
 > EOF
 ```
+
+```bash
+cat /etc/os-release
+```
