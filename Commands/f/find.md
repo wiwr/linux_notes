@@ -90,3 +90,7 @@ find . -name "*.txt" -exec grep -l "what I looking for " {} +
 ```bash
 find /var -type f -name "*.log" | xargs grep "error"
 ```
+
+```bash
+find / -name '*.log' 2>/dev/null
+```
