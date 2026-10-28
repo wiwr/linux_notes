@@ -66,3 +66,6 @@ Then upload files
 Go to Workspace/Models and Create
 Then pick Base Model and pick Knowledge base
 
+## Test which model can run 
+granite4.1:3b    -> crash VM and host
+llama3.2:latest -> is very slow
