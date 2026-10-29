@@ -1,4 +1,8 @@
 ```bash
+sudo apt install vmstat
+```
+
+```bash
 vmstat
 ```
 live mode every 1 sec
@@ -9,3 +13,4 @@ callect data every 1 sec 5 times
 ```bash
 vmstat 1 5
 ```
+
