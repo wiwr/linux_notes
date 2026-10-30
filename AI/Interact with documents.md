@@ -70,4 +70,3 @@ Then pick Base Model and pick Knowledge base
 granite4.1:3b    -> crash VM and host
 llama3.2:latest -> is very slow
 ![[Pasted image 20261028234014.png]]
-![[Pasted image 20261028234048.png]]
