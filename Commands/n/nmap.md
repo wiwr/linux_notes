@@ -1,5 +1,5 @@
 # Installation
-```
+```bash
 sudo apt install nmap
 ```
 # Scans
@@ -26,6 +26,10 @@ sudo nmap 192.168.122.0/24 -sn -n -oA net | grep for | cut -d" " -f5
 scan only the 10 most commonly used TCP ports
 ```bash
 sudo nmap 192.168.122.192 --top-ports=10
+```
+
+```bash
+sudo nmap -sT -p 88,443 192.168.18.0/24
 ```
 ## specific ports
 for single
@@ -61,7 +65,7 @@ nmap -sn --open 192.168.1.0/24 --exclude 192.168.1.1
 nmap -sn 192.167.1.0/24 | grep Nmap
 ```
 
-```
+```bash
 nmap -sn 192.167.1.0/24 | grep Nmap | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}'
 ```
 ## run nmap with addresses from file
@@ -75,21 +79,21 @@ in all three formats
 nmap --sn --open -iL iplist.txt -oA output
 ```
 
-```
+```bash
 nmap -p 22 -sV $(nmap -sn 192.167.1.0/24 | grep Nmap | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}')
 ```
 
-```
+```bash
 nmap -p 22 --script ssh2-enum-algos $(nmap -sn 192.167.1.0/24 | grep Nmap | grep -Eo '([0-9]{1,3}\.){3}[0-9]{1,3}')
 ```
 # Firewall
 REJECT or DROP
 
-```
+```bash
 nmap -p 80 --reason -v 192.168.1.222 192.168.1.223
 ```
 
-```
+```bash
 nc -zv 192.168.1.222 80
 ```
 
