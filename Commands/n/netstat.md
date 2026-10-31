@@ -2,6 +2,10 @@
 netstat
 ```
 
+show ports and ip
+```bash
+netstat -n
+```
 All
 ```bash
 netstat -a
