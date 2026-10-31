@@ -105,7 +105,9 @@ nmap -sV -sC -v 192.168.1.222
 ```bash
 nmap -sV --script=http-malware-host -p443 192.168.1.222
 ```
-
+```bash
+sudo nmap --script vuln 192.168.1.222
+```
 ## More verbose
 ```bash
 nmap -vv 192.168.1.222
