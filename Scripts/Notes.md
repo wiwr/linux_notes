@@ -31,3 +31,12 @@ chmod +x hello.sh
 ```bash
 ./hello.sh
 ```
+
+## Echo and read
+```bash
+#! /bin/bash
+
+echo -n "Enter your name: "
+read name
+echo "Nice to meet you, $name."
+```
