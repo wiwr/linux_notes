@@ -18,3 +18,16 @@ BEGIN { print "hello, world!" }
 awk -f hello.awk
 ```
 
+### shell script
+```bash
+#! /bin/sh -
+
+echo "Hello world!"
+```
+
+```bash
+chmod +x hello.sh
+```
+```bash
+./hello.sh
+```
