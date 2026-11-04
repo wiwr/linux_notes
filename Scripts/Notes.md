@@ -58,3 +58,13 @@ while [ $# -gt 0 ]; do
 	shift
 done
 ```
+
+### Regular expression
+
+`ab*c` matches 0 or many b
+but not other character ab*c doesn't match aXc
+
+```bash
+echo 'Hi there how are you?' | grep --color 'how'
+```
+
