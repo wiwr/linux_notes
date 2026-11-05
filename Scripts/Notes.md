@@ -67,4 +67,12 @@ but not other character ab*c doesn't match aXc
 ```bash
 echo 'Hi there how are you?' | grep --color 'how'
 ```
-
+```bash
+echo tolstoy says i am toldtoy | grep --color tol.toy
+```
+```bash
+echo tolstoy says i am tol.toy | grep --color 'tol\.toy'
+```
+```bash
+echo 123 eafg | grep --color '[aeiouy]'
+```
