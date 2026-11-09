@@ -76,3 +76,9 @@ echo tolstoy says i am tol.toy | grep --color 'tol\.toy'
 ```bash
 echo 123 eafg | grep --color '[aeiouy]'
 ```
+```bash
+echo you 123 | grep --color '[[:digit:]]'
+```
+```bash
+echo you 123 | grep --coolor '[^[:alpha:]]'
+```
