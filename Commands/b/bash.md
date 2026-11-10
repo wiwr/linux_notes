@@ -15,6 +15,8 @@ bash +n -x script.sh
 `ctrl-f` - forward char
 `ctrl-b` - back char
 `ctrl-t` - swap char
-`ctrl-w` - delete one word back
+`ctrl-w` - delete one word back (till space)
 `ctrl-u` - delete entire line to left
+`ctrl-k` - delete till end of line
 `ctrl-r` - reverse search
+
