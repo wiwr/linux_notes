@@ -82,3 +82,10 @@ echo you 123 | grep --color '[[:digit:]]'
 ```bash
 echo you 123 | grep --coolor '[^[:alpha:]]'
 ```
+
+```bash
+echo ac abc abbc abbbc | egrep --color 'ab?c'
+```
+```bash
+echo 'hi and hello' | egrep --collor 'hello|hi'
+```

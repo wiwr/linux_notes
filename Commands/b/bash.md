@@ -7,3 +7,14 @@ bash script.sh
 ```bash
 bash +n -x script.sh
 ```
+
+# shortcuts
+`alt-f` - forward word
+`alt-b` - back word
+`alt-t` - swap words
+`ctrl-f` - forward char
+`ctrl-b` - back char
+`ctrl-t` - swap char
+`ctrl-w` - delete one word back
+`ctrl-u` - delete entire line to left
+`ctrl-r` - reverse search
